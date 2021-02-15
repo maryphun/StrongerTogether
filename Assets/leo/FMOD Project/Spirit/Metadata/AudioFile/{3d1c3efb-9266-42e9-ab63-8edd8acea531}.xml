@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.01.00">
 	<object class="AudioFile" id="{3d1c3efb-9266-42e9-ab63-8edd8acea531}">
+		<property name="color">
+			<value>Blue Light 1</value>
+		</property>
 		<property name="assetPath">
-			<value>plucks.ogg</value>
+			<value>MUSIC/plucks.ogg</value>
 		</property>
 		<property name="isStreaming">
 			<value>true</value>

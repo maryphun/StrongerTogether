@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.01.00">
-	<object class="AudioFile" id="{a5546dea-c598-4a17-88ef-de49766a04fd}">
+	<object class="AudioFile" id="{fed6e85b-1ae9-4f59-9ba4-1a0271d0457d}">
 		<property name="assetPath">
-			<value>MUSIC/pizzi.ogg</value>
+			<value>SFX/sfx.ogg</value>
 		</property>
 		<property name="isStreaming">
 			<value>true</value>
@@ -14,7 +14,7 @@
 			<value>2</value>
 		</property>
 		<property name="length">
-			<value>31.475419501133786</value>
+			<value>15.737709750566893</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{ec425f3b-19e3-49bc-9365-44e365ed24c8}</destination>

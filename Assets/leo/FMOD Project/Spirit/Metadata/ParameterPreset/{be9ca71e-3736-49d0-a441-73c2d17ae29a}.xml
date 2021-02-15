@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPreset" id="{be9ca71e-3736-49d0-a441-73c2d17ae29a}">
+		<property name="name">
+			<value>Parameter 1</value>
+		</property>
+		<relationship name="folder">
+			<destination>{4abae595-1dcd-4f36-be9e-bd710dce11d7}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{3f86488e-6c3d-4021-bd20-d2a9788a0743}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{3f86488e-6c3d-4021-bd20-d2a9788a0743}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>8</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>SFX1</value>
+			<value>SFX2</value>
+			<value>SFX3</value>
+			<value>SFX4</value>
+			<value>SFX5</value>
+			<value>SFX6</value>
+			<value>SFX7</value>
+			<value>SFX8</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
