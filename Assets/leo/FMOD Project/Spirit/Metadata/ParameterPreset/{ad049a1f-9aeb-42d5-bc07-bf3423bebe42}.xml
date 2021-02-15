@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPreset" id="{ad049a1f-9aeb-42d5-bc07-bf3423bebe42}">
+		<property name="color">
+			<value>Blue Light 1</value>
+		</property>
+		<property name="name">
+			<value>Score</value>
+		</property>
+		<relationship name="folder">
+			<destination>{4abae595-1dcd-4f36-be9e-bd710dce11d7}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{58cd4819-9c19-4863-b76d-25bfb9c1cb37}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{58cd4819-9c19-4863-b76d-25bfb9c1cb37}">
+		<property name="maximum">
+			<value>100</value>
+		</property>
+		<property name="isGlobal">
+			<value>true</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="seekSpeed">
+			<value>74</value>
+		</property>
+		<property name="isExposedRecursively">
+			<value>false</value>
+		</property>
+	</object>
+</objects>
