@@ -1,25 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8114998111903511566
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/SFX.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/leo/FMOD Project/Spirit/Build/Desktop/SFX.bank
-  Name: SFX
-  StudioPath: bank:/SFX
-  lastModified: 637490222406040492
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
---- !u!114 &-5685546865876465436
+--- !u!114 &-8892541035708440893
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -33,13 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Music
   guid: 9c91e32cfc6fca4ba700ab40d5cb5f78
-<<<<<<< HEAD
   Banks:
-  - {fileID: -54573556342740079}
-  - {fileID: -3698818411668210894}
-=======
-  Banks: []
->>>>>>> main
+  - {fileID: -7770901455117131917}
+  - {fileID: 8277115610387518577}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -47,7 +24,7 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 31529
---- !u!114 &-3698818411668210894
+--- !u!114 &-7770901455117131917
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -57,16 +34,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Music.bank
+  m_Name: bank:/Master.bank
   m_EditorClassIdentifier: 
-  Path: Assets/leo/FMOD Project/Spirit/Build/Desktop/Music.bank
-  Name: Music
-  StudioPath: bank:/Music
-  lastModified: 637490222408770419
+  Path: Assets/leo/FMOD Project/Spirit/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 637490645890000000
   LoadResult: 0
   FileSizes: []
   Exists: 1
---- !u!114 &-1922624098243516864
+--- !u!114 &-2869212273923508780
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -85,58 +62,6 @@ MonoBehaviour:
   ID:
     data1: 3871509086
     data2: 556632285
-  Exists: 0
---- !u!114 &-760370402136552182
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/leo/FMOD Project/Spirit/Build/Desktop/Master.strings.bank
-  Name: Master.strings
-  StudioPath: bank:/Master.strings
-<<<<<<< HEAD
-  lastModified: 637490222404180422
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 932
-=======
-  lastModified: 637490238248588703
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 700
->>>>>>> main
-  Exists: 1
---- !u!114 &-54573556342740079
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/leo/FMOD Project/Spirit/Build/Desktop/Master.bank
-  Name: Master
-  StudioPath: bank:/Master
-<<<<<<< HEAD
-  lastModified: 637490222404140429
-=======
-  lastModified: 637490238248598677
->>>>>>> main
-  LoadResult: 0
-  FileSizes: []
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -151,31 +76,22 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: -760370402136552182}
-  - {fileID: -54573556342740079}
-<<<<<<< HEAD
-  - {fileID: -3698818411668210894}
-  - {fileID: -8114998111903511566}
+  - {fileID: 1586807378660530699}
+  - {fileID: -7770901455117131917}
+  - {fileID: 8277115610387518577}
+  - {fileID: 821691723509047562}
   EditorEvents:
-  - {fileID: -5685546865876465436}
-  - {fileID: 6464710553279477523}
+  - {fileID: 500794185711046045}
+  - {fileID: -8892541035708440893}
   EditorParameters:
-  - {fileID: -1922624098243516864}
-=======
-  EditorEvents: []
-  EditorParameters: []
->>>>>>> main
+  - {fileID: -2869212273923508780}
   MasterBanks:
-  - {fileID: -54573556342740079}
+  - {fileID: -7770901455117131917}
   StringsBanks:
-  - {fileID: -760370402136552182}
-<<<<<<< HEAD
-  stringsBankWriteTime: 637490222404180422
-=======
-  stringsBankWriteTime: 637490238248588703
->>>>>>> main
+  - {fileID: 1586807378660530699}
+  stringsBankWriteTime: 637490645890000000
   cacheVersion: 6
---- !u!114 &6464710553279477523
+--- !u!114 &500794185711046045
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -190,8 +106,8 @@ MonoBehaviour:
   Path: event:/NoteSFX
   guid: 4fb486d647757149ab1a536494705fc4
   Banks:
-  - {fileID: -54573556342740079}
-  - {fileID: -8114998111903511566}
+  - {fileID: -7770901455117131917}
+  - {fileID: 821691723509047562}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -199,3 +115,60 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &821691723509047562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/SFX.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/leo/FMOD Project/Spirit/Build/Desktop/SFX.bank
+  Name: SFX
+  StudioPath: bank:/SFX
+  lastModified: 637490645890000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &1586807378660530699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/leo/FMOD Project/Spirit/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 637490645890000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &8277115610387518577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Music.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/leo/FMOD Project/Spirit/Build/Desktop/Music.bank
+  Name: Music
+  StudioPath: bank:/Music
+  lastModified: 637490645890000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
