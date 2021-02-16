@@ -33,9 +33,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Music
   guid: 9c91e32cfc6fca4ba700ab40d5cb5f78
+<<<<<<< HEAD
   Banks:
   - {fileID: -54573556342740079}
   - {fileID: -3698818411668210894}
+=======
+  Banks: []
+>>>>>>> main
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -81,7 +85,7 @@ MonoBehaviour:
   ID:
     data1: 3871509086
     data2: 556632285
-  Exists: 1
+  Exists: 0
 --- !u!114 &-760370402136552182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97,11 +101,19 @@ MonoBehaviour:
   Path: Assets/leo/FMOD Project/Spirit/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
+<<<<<<< HEAD
   lastModified: 637490222404180422
   LoadResult: 0
   FileSizes:
   - Name: Desktop
     Value: 932
+=======
+  lastModified: 637490238248588703
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 700
+>>>>>>> main
   Exists: 1
 --- !u!114 &-54573556342740079
 MonoBehaviour:
@@ -118,7 +130,11 @@ MonoBehaviour:
   Path: Assets/leo/FMOD Project/Spirit/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
+<<<<<<< HEAD
   lastModified: 637490222404140429
+=======
+  lastModified: 637490238248598677
+>>>>>>> main
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -137,6 +153,7 @@ MonoBehaviour:
   EditorBanks:
   - {fileID: -760370402136552182}
   - {fileID: -54573556342740079}
+<<<<<<< HEAD
   - {fileID: -3698818411668210894}
   - {fileID: -8114998111903511566}
   EditorEvents:
@@ -144,11 +161,19 @@ MonoBehaviour:
   - {fileID: 6464710553279477523}
   EditorParameters:
   - {fileID: -1922624098243516864}
+=======
+  EditorEvents: []
+  EditorParameters: []
+>>>>>>> main
   MasterBanks:
   - {fileID: -54573556342740079}
   StringsBanks:
   - {fileID: -760370402136552182}
+<<<<<<< HEAD
   stringsBankWriteTime: 637490222404180422
+=======
+  stringsBankWriteTime: 637490238248588703
+>>>>>>> main
   cacheVersion: 6
 --- !u!114 &6464710553279477523
 MonoBehaviour:
