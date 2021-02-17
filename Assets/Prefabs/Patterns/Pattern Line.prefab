@@ -159,7 +159,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 6, y: 8}
+  m_Size: {x: 12.8, y: 7.2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
@@ -231,8 +231,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6da2aa9c7b5a4be42a375318dda21ce0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  circleColor: {r: 0.5660378, g: 0, b: 0, a: 1}
-  soundEffectCircle: Click
+  circleColor: {r: 0, g: 0, b: 0, a: 1}
   circles:
   - sprite: {fileID: 1713302397986368299}
     timing: 0
