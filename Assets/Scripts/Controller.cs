@@ -6,7 +6,6 @@ using DG.Tweening;
 public class Controller : MonoBehaviour
 {
     [Header("Configuration")]
-    [SerializeField] private string soundEffectCircleClick = default;
     [SerializeField] private string soundEffectCircleMiss = default;
     [SerializeField] private float circleMissTiming = 1.0f;
     [SerializeField, Range(0.0f, 0.6f)] private float patternFadeTime = 0.3f;
@@ -41,7 +40,7 @@ public class Controller : MonoBehaviour
 
     public void CircleClicked(bool patternEnd)
     {
-        AudioManager.Instance.PlaySFX(soundEffectCircleClick);
+        FMODUnity.RuntimeManager.PlayOneShot("event:/NoteSFX");
         audio.ChangeScore(scoreAdditionForCircleClick);
 
         if (patternEnd) PatternEnd();

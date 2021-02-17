@@ -195,7 +195,7 @@ Animator:
   m_GameObject: {fileID: 1713302398151137672}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: cf450c5057ad6e44e8e69e2319690e85, type: 2}
+  m_Controller: {fileID: 9100000, guid: b62eeee61f0da3644a7386be90d5fb04, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -260,7 +260,6 @@ MonoBehaviour:
   - sprite: {fileID: 1713302399362535397}
     timing: 1.5
   animator: {fileID: 1713302398151137673}
-  overrideController: {fileID: 22100000, guid: 4caa7145ce0a87e42909f486895888b3, type: 2}
   speedModifier: 1
 --- !u!1 &1713302398727989745
 GameObject:
