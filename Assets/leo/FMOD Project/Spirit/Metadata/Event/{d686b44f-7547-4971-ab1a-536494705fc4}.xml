@@ -88,7 +88,7 @@
 	</object>
 	<object class="EventMixerMaster" id="{d4cde5c0-23a2-453a-8fdb-d3df848739d5}">
 		<property name="volume">
-			<value>2.5</value>
+			<value>-13.5</value>
 		</property>
 		<relationship name="effectChain">
 			<destination>{f55ca431-86f8-42b5-8a08-917c81748031}</destination>
@@ -169,25 +169,31 @@
 	<object class="MixerBusPanner" id="{8ee9500c-b56e-4162-9876-04c66ba143e4}" />
 	<object class="DelayEffect" id="{4dedc1f0-a277-415c-b456-408b17358959}">
 		<property name="delay">
-			<value>9</value>
+			<value>400</value>
 		</property>
 		<property name="feedback">
-			<value>87</value>
+			<value>59</value>
 		</property>
 		<property name="level">
-			<value>-55</value>
+			<value>-8</value>
+		</property>
+		<property name="dryLevel">
+			<value>5.5</value>
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{767f72b9-9c8e-40f4-b19e-9160cd2fbdb0}" />
 	<object class="SFXReverbEffect" id="{314dece1-c45b-4a76-a05e-5d759fc98d21}">
 		<property name="decayTime">
-			<value>850</value>
+			<value>6500</value>
 		</property>
 		<property name="wetLevel">
 			<value>4</value>
 		</property>
 	</object>
 	<object class="LowpassEffect" id="{6c1167c8-5afa-41a8-8361-9e95ac8045bc}">
+		<property name="bypass">
+			<value>true</value>
+		</property>
 		<property name="cutoff">
 			<value>300</value>
 		</property>
@@ -200,7 +206,7 @@
 			<value>volume</value>
 		</property>
 		<property name="amount">
-			<value>26.5</value>
+			<value>8</value>
 		</property>
 	</object>
 	<object class="SingleSound" id="{d18d3102-65af-4d74-99b0-a683c487f8e7}">
@@ -251,7 +257,7 @@
 			<value>1.271186440677966</value>
 		</property>
 		<property name="value">
-			<value>700</value>
+			<value>10</value>
 		</property>
 		<property name="curveShape">
 			<value>-0.453277975</value>
@@ -262,7 +268,7 @@
 			<value>100</value>
 		</property>
 		<property name="value">
-			<value>22000</value>
+			<value>10</value>
 		</property>
 	</object>
 </objects>
