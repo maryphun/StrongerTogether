@@ -1,30 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8892541035708440893
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music
-  m_EditorClassIdentifier: 
-  Path: event:/Music
-  guid: 9c91e32cfc6fca4ba700ab40d5cb5f78
-  Banks:
-  - {fileID: -7770901455117131917}
-  - {fileID: 8277115610387518577}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 31529
---- !u!114 &-7770901455117131917
+--- !u!114 &-9127911786120542450
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -34,16 +10,42 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
+  m_Name: bank:/Master.strings.bank
   m_EditorClassIdentifier: 
-  Path: Assets/leo/FMOD Project/Spirit/Build/Desktop/Master.bank
-  Name: Master
-  StudioPath: bank:/Master
-  lastModified: 637490645890000000
+  Path: Assets/leo/FMOD Project/Spirit/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 637490895763924628
   LoadResult: 0
-  FileSizes: []
+  FileSizes:
+  - Name: Desktop
+    Value: 932
   Exists: 1
---- !u!114 &-2869212273923508780
+--- !u!114 &-7749078064787707938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/NoteSFX
+  m_EditorClassIdentifier: 
+  Path: event:/NoteSFX
+  guid: 4fb486d647757149ab1a536494705fc4
+  Banks:
+  - {fileID: 8812899057059419261}
+  - {fileID: 8152783855575283498}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-5803219918456995857
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -63,6 +65,30 @@ MonoBehaviour:
     data1: 3871509086
     data2: 556632285
   Exists: 1
+--- !u!114 &-3671651193906053956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music
+  m_EditorClassIdentifier: 
+  Path: event:/Music
+  guid: 9c91e32cfc6fca4ba700ab40d5cb5f78
+  Banks:
+  - {fileID: 8812899057059419261}
+  - {fileID: 9035471772037167429}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 31529
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -76,47 +102,22 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: 1586807378660530699}
-  - {fileID: -7770901455117131917}
-  - {fileID: 8277115610387518577}
-  - {fileID: 821691723509047562}
+  - {fileID: -9127911786120542450}
+  - {fileID: 8812899057059419261}
+  - {fileID: 9035471772037167429}
+  - {fileID: 8152783855575283498}
   EditorEvents:
-  - {fileID: 500794185711046045}
-  - {fileID: -8892541035708440893}
+  - {fileID: -7749078064787707938}
+  - {fileID: -3671651193906053956}
   EditorParameters:
-  - {fileID: -2869212273923508780}
+  - {fileID: -5803219918456995857}
   MasterBanks:
-  - {fileID: -7770901455117131917}
+  - {fileID: 8812899057059419261}
   StringsBanks:
-  - {fileID: 1586807378660530699}
-  stringsBankWriteTime: 637490645890000000
+  - {fileID: -9127911786120542450}
+  stringsBankWriteTime: 637490895763924628
   cacheVersion: 6
---- !u!114 &500794185711046045
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-<<<<<<< HEAD
-  m_Name: event:/NoteSFX
-  m_EditorClassIdentifier: 
-  Path: event:/NoteSFX
-  guid: 4fb486d647757149ab1a536494705fc4
-  Banks:
-  - {fileID: -7770901455117131917}
-  - {fileID: 821691723509047562}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &821691723509047562
+--- !u!114 &8152783855575283498
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -131,11 +132,11 @@ MonoBehaviour:
   Path: Assets/leo/FMOD Project/Spirit/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 637490645890000000
+  lastModified: 637490895130178115
   LoadResult: 0
   FileSizes: []
   Exists: 1
---- !u!114 &1586807378660530699
+--- !u!114 &8812899057059419261
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -145,16 +146,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
+  m_Name: bank:/Master.bank
   m_EditorClassIdentifier: 
-  Path: Assets/leo/FMOD Project/Spirit/Build/Desktop/Master.strings.bank
-  Name: Master.strings
-  StudioPath: bank:/Master.strings
-  lastModified: 637490645890000000
+  Path: Assets/leo/FMOD Project/Spirit/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 637490895763874942
   LoadResult: 0
   FileSizes: []
   Exists: 1
---- !u!114 &8277115610387518577
+--- !u!114 &9035471772037167429
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -169,7 +170,7 @@ MonoBehaviour:
   Path: Assets/leo/FMOD Project/Spirit/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 637490645890000000
+  lastModified: 637490895130686760
   LoadResult: 0
   FileSizes: []
   Exists: 1

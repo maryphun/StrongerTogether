@@ -37,4 +37,10 @@ class FMODAudioManager : MonoBehaviour
         FMODUnity.RuntimeManager.StudioSystem.setParameterByID(scoreParamID, scoreParam * 100f);
         scoreVisualizer.value = scoreParam;
     }
+
+    public float ChangeScore(float num)
+    {
+        scoreParam = Mathf.Max(Mathf.Min(scoreParam + num, 1f), 0f);
+        return scoreParam;
+    }
 }
