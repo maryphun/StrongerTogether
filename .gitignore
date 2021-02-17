@@ -62,3 +62,11 @@ crashlytics-build.properties
 Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset
 
 Packages/manifest.json
+
+fmod_editor.log
+
+Assets/Case/background.meta
+
+*.meta
+
+UserSettings/EditorUserSettings.asset
