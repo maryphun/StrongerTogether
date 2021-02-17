@@ -15,25 +15,42 @@ public class pattern : MonoBehaviour
     [SerializeField] private Color circleColor = default;
     [SerializeField] private CIRCLES[] circles;
     [SerializeField] private Animator animator;
+    [SerializeField, Range(0.75f, 1.99f)] private float speedModifier = 1.0f;
     
     private int currentActiveIndex;
     private Controller controller;
     private float missDelayTime;
 
-    private void Awake()
+    public Animator Animator
     {
-        foreach (CIRCLES circle in circles)
-        {
-            circle.sprite.color = new Color(0, 0, 0, 0);
-        }
+        get => animator;
     }
+
+    //private void Awake()
+    //{
+    //    foreach (CIRCLES circle in circles)
+    //    {
+    //        circle.sprite.color = new Color(0, 0, 0, 0);
+    //    }
+    //}
 
     public void Activate(Controller referencePass, float missTimer)
     {
+        // Variable Initialize
         currentActiveIndex = 0;
         controller = referencePass;
         missDelayTime = missTimer;
+        
+        // Initialization
+        for (int i = 0; i < circles.Length; i++)
+        {
+            circles[i].sprite.color = new Color(0, 0, 0, 0);
+            circles[i].timing = circles[i].timing * (2f - speedModifier);
+        }
+
+        // Start Animation
         animator.SetTrigger("Start");
+        animator.speed = animator.speed * speedModifier;
         StartCoroutine(StartPattern());
     }
 
@@ -48,7 +65,7 @@ public class pattern : MonoBehaviour
             if (elapsedTime >= circles[currentCount].timing)
             {
                 circles[currentCount].sprite.DOColor(circleColor, 0.1f);
-                StartCoroutine(Circle(missDelayTime, currentCount));
+                StartCoroutine(Circle(missDelayTime * (2f - speedModifier), currentCount));
                 currentCount++;
             }
 
@@ -68,7 +85,7 @@ public class pattern : MonoBehaviour
             Destroy(circles[index].sprite.gameObject, 0.3f);
             currentActiveIndex++;
 
-            controller.CircleMissed();
+            controller.CircleMissed(currentActiveIndex == circles.Length);
         }
     }
 
@@ -80,23 +97,20 @@ public class pattern : MonoBehaviour
             && Vector2.Distance(mousePos, circles[currentActiveIndex].sprite.transform.position) < 0.75f)
         {
             circles[currentActiveIndex].sprite.color = circleColor;
-            circles[currentActiveIndex].sprite.DOFade(0f, 0.25f);
-            circles[currentActiveIndex].sprite.transform.DOScale(2f, 0.25f);
+            StartCoroutine(FadeAfterDelay(0.2f, 0.1f, 0.0f, circles[currentActiveIndex].sprite));
+            //circles[currentActiveIndex].sprite.DOFade(0.0f, 0.25f);
+            circles[currentActiveIndex].sprite.GetComponent<Animator>().Play("circlebreak");
             Destroy(circles[currentActiveIndex].sprite.gameObject, 0.3f);
             currentActiveIndex++;
 
-            controller.CircleClicked();
-
-            if (currentActiveIndex == circles.Length)
-            {
-                EndPattern();
-                enabled = false;
-            }
+            controller.CircleClicked(currentActiveIndex == circles.Length);
         }
     }
 
-    private void EndPattern()
+    IEnumerator FadeAfterDelay(float delay, float fadeTime, float endValue, SpriteRenderer target)
     {
-        Destroy(gameObject, 0.5f);
+        yield return new WaitForSeconds(delay);
+
+        target.DOFade(endValue, fadeTime);
     }
 }
