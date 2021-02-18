@@ -5,6 +5,7 @@ using UnityEngine;
 public class HandLookAt : MonoBehaviour
 {
     [SerializeField] private float offset = 215;
+    [SerializeField] private float handRotateSpeed = 0.75f;
     [SerializeField] private float horizontalMoveMinMax = 1f;
     [SerializeField] private Vector2 detectionMargin = new Vector2(1920f, 1080f);   // only detect certain part of the screen, ignore the edge
 
@@ -40,10 +41,11 @@ public class HandLookAt : MonoBehaviour
         // calculation
         float AngleRad = Mathf.Atan2(target.y - transform.position.y, target.x - transform.position.x);
         float angle = (180f / Mathf.PI) * AngleRad + offset;
-        //Debug.Log(gameObject.name + "  =  " + angle);
+        
         // apply
-        rigidbody.rotation = angle;
+        rigidbody.rotation = Mathf.MoveTowardsAngle(rigidbody.rotation, angle, handRotateSpeed);
     }
+   
 
     private void UpdatePositionX(float target)
     {

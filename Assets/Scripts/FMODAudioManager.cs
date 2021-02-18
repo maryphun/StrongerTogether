@@ -28,8 +28,6 @@ class FMODAudioManager : MonoBehaviour
         FMOD.Studio.PARAMETER_DESCRIPTION scoreParameterDescription;
         scoreEventDescription.getParameterDescriptionByName("Score", out scoreParameterDescription);
         scoreParamID = scoreParameterDescription.id;
-
-        instance.start();
     }
 
     private void Update()
@@ -42,5 +40,21 @@ class FMODAudioManager : MonoBehaviour
     {
         scoreParam = Mathf.Max(Mathf.Min(scoreParam + num, 1f), 0f);
         return scoreParam;
+    }
+
+    public void StartBGM()
+    {
+        instance.start();
+    }
+
+    public void StopBGM(bool fade)
+    {
+        if (fade)
+        {
+            instance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            return;
+        }
+
+        instance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
     }
 }

@@ -62,7 +62,7 @@ public class Characters : MonoBehaviour
             characters[i].Sprite = characters[i].transform.GetComponent<SpriteRenderer>();
             characters[i].Sprite.color = new Color(1, 1, 1, 0);
             characters[i].Light = characters[i].transform.GetComponentInChildren<Light2D>();
-            characters[i].Light.pointLightOuterRadius = 0.0f;
+            characters[i].Light.intensity = 0.0f;
             characters[i].IsHiding = true;
         }
     }
@@ -78,7 +78,7 @@ public class Characters : MonoBehaviour
                     // show character
                     characters[i].IsHiding = false;
                     characters[i].Sprite.DOFade(1.0f, fadeTime);
-                    StartCoroutine(LightSwitch(1.0f, fadeTime, characters[i].Light));
+                    FadeLight(1.0f, fadeTime, characters[i].Light);
                 }
             }
             else
@@ -88,7 +88,7 @@ public class Characters : MonoBehaviour
                     // hide character
                     characters[i].IsHiding = true;
                     characters[i].Sprite.DOFade(0.0f, fadeTime);
-                    StartCoroutine(LightSwitch(0.0f, fadeTime, characters[i].Light));
+                    FadeLight(0.0f, fadeTime, characters[i].Light);
                 }
             }
         }
@@ -104,8 +104,14 @@ public class Characters : MonoBehaviour
         {
             timeElapsed += Time.deltaTime;
             lerp = timeElapsed / time;
-            target.pointLightOuterRadius = Mathf.Lerp(startValue, endValue, lerp);
+            target.intensity = Mathf.Lerp(startValue, endValue, lerp);
             yield return null;
         }
+    }
+
+    public void FadeLight(float endValue, float time, Light2D target)
+    {
+        target.StopAllCoroutines();
+        target.StartCoroutine(LightSwitch(endValue, time, target));
     }
 }

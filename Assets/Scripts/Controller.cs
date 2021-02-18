@@ -21,6 +21,7 @@ public class Controller : MonoBehaviour
     [SerializeField] private FMODAudioManager audio;
     [SerializeField] private GameObject[] patterns;
     [SerializeField] private Characters characterScript;
+    [SerializeField] private GameObject hands;
 
     [Header("Debug")]
     [SerializeField, Range(0, 1)] private float currentScore = 0f;
@@ -29,7 +30,7 @@ public class Controller : MonoBehaviour
     private int combo;
     private int lastPattternIndex;
 
-    void Start()
+    void Awake()
     {
         // reference null check
         if (Object.ReferenceEquals(audio, null))
@@ -40,16 +41,32 @@ public class Controller : MonoBehaviour
         {
             Debug.LogWarning("GameObject: [" + gameObject.name + "] missing reference of characters");
         }
+        if (Object.ReferenceEquals(hands, null))
+        {
+            Debug.LogWarning("GameObject: [" + gameObject.name + "] missing reference of hands");
+        }
 
         // Reset random seed to make sure system get different random number each play
         Random.seed = System.DateTime.Now.Millisecond;
 
+        // Disable hands visual until game actually start
+        hands.SetActive(false);
+    }
+
+    public void StartGame()
+    {
         // Variable Initialization
         combo = 0;
         currentPattern = null;
 
         // Instantiate First Pattern (avoid the last pattern for first spawn, if there are two pattern in this array, the first one always spawn first)
-        StartCoroutine(SpawnPattern(patternSpawnInterval, patterns.Length-1));
+        StartCoroutine(SpawnPattern(patternSpawnInterval, patterns.Length - 1));
+
+        // BGM
+        audio.StartBGM();
+
+        // show hands
+        hands.SetActive(true);
     }
 
     public void CircleClicked(bool patternEnd)
