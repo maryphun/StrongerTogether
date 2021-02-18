@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.Experimental.Rendering.Universal;
 
 public class stick : MonoBehaviour
 {
@@ -17,6 +18,11 @@ public class stick : MonoBehaviour
         transform.DOMoveY(transform.position.y - 13f, animationTime);
         transform.DOScale(5f, animationTime);
 
+        var light = transform.GetChild(0);
+        light.SetParent(null);
+        StartCoroutine(LightSwitch(0.0f, animationTime/2f, light.GetComponent<Light2D>()));
+        Destroy(light.gameObject, animationTime / 2f);
+
         StartCoroutine(StartGameWithDelay(animationTime));
     }
 
@@ -26,5 +32,20 @@ public class stick : MonoBehaviour
 
         controller.StartGame();
         Destroy(gameObject);
+    }
+
+    IEnumerator LightSwitch(float endValue, float time, Light2D target)
+    {
+        float startValue = target.intensity;
+        float lerp = 0.0f;
+        float timeElapsed = 0.0f;
+
+        while (startValue != endValue)
+        {
+            timeElapsed += Time.deltaTime;
+            lerp = timeElapsed / time;
+            target.intensity = Mathf.Lerp(startValue, endValue, lerp);
+            yield return null;
+        }
     }
 }

@@ -11,8 +11,7 @@ public class pattern : MonoBehaviour
         public SpriteRenderer sprite;
         public float timing;
     }
-
-    [SerializeField] private Color circleColor = default;
+    
     [SerializeField] private CIRCLES[] circles;
     [SerializeField] private Animator animator;
     [SerializeField, Range(0.75f, 1.99f)] private float speedModifier = 1.0f;
@@ -25,15 +24,7 @@ public class pattern : MonoBehaviour
     {
         get => animator;
     }
-
-    //private void Awake()
-    //{
-    //    foreach (CIRCLES circle in circles)
-    //    {
-    //        circle.sprite.color = new Color(0, 0, 0, 0);
-    //    }
-    //}
-
+    
     public void Activate(Controller referencePass, float missTimer)
     {
         // Variable Initialize
@@ -44,7 +35,7 @@ public class pattern : MonoBehaviour
         // Initialization
         for (int i = 0; i < circles.Length; i++)
         {
-            circles[i].sprite.color = new Color(0, 0, 0, 0);
+            circles[i].sprite.color = new Color(1, 1, 1, 0);
             circles[i].timing = circles[i].timing * (2f - speedModifier);
         }
 
@@ -64,7 +55,7 @@ public class pattern : MonoBehaviour
 
             if (elapsedTime >= circles[currentCount].timing)
             {
-                circles[currentCount].sprite.DOColor(circleColor, 0.1f);
+                circles[currentCount].sprite.DOColor(Color.white, 0.1f);
                 StartCoroutine(Circle(missDelayTime * (2f - speedModifier), currentCount));
                 currentCount++;
             }
@@ -80,9 +71,11 @@ public class pattern : MonoBehaviour
         // expired
         if (currentActiveIndex <= index)
         {
-            circles[index].sprite.color = circleColor;
-            circles[index].sprite.DOFade(0f, 0.25f);
-            Destroy(circles[index].sprite.gameObject, 0.3f);
+            circles[index].sprite.color = Color.white;
+            circles[currentActiveIndex].sprite.GetComponent<Animator>().Play("circlefail");
+            float animationTime = circles[currentActiveIndex].sprite.GetComponent<Animator>().GetCurrentAnimatorClipInfo(0)[0].clip.length;
+            circles[index].sprite.gameObject.AddComponent<CircleFail>();    // animation effect that update its color properties
+            Destroy(circles[index].sprite.gameObject, animationTime);
             currentActiveIndex++;
 
             controller.CircleMissed(currentActiveIndex == circles.Length);
@@ -96,9 +89,8 @@ public class pattern : MonoBehaviour
             || (Input.GetMouseButtonDown(0) && currentActiveIndex == 0))
             && Vector2.Distance(mousePos, circles[currentActiveIndex].sprite.transform.position) < 0.75f)
         {
-            circles[currentActiveIndex].sprite.color = circleColor;
+            circles[currentActiveIndex].sprite.color = Color.white;
             StartCoroutine(FadeAfterDelay(0.2f, 0.1f, 0.0f, circles[currentActiveIndex].sprite));
-            //circles[currentActiveIndex].sprite.DOFade(0.0f, 0.25f);
             circles[currentActiveIndex].sprite.GetComponent<Animator>().Play("circlebreak");
             Destroy(circles[currentActiveIndex].sprite.gameObject, 0.3f);
             currentActiveIndex++;

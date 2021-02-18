@@ -96,7 +96,7 @@ public class Characters : MonoBehaviour
 
     IEnumerator LightSwitch(float endValue, float time, Light2D target)
     {
-        float startValue = target.pointLightOuterRadius;
+        float startValue = target.intensity;
         float lerp = 0.0f;
         float timeElapsed = 0.0f;
 
