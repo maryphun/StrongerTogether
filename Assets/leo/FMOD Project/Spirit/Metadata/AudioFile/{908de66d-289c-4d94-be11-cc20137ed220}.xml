@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{908de66d-289c-4d94-be11-cc20137ed220}">
+		<property name="assetPath">
+			<value>brass.ogg</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>62.950816326530614</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{ec425f3b-19e3-49bc-9365-44e365ed24c8}</destination>
+		</relationship>
+	</object>
+</objects>
