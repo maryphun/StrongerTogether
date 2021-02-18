@@ -20,6 +20,10 @@ public class Controller : MonoBehaviour
     [Header("References")]
     [SerializeField] private FMODAudioManager audio;
     [SerializeField] private GameObject[] patterns;
+    [SerializeField] private Characters characterScript;
+
+    [Header("Debug")]
+    [SerializeField, Range(0, 1)] private float currentScore = 0f;
 
     private pattern currentPattern;
     private int combo;
@@ -27,6 +31,16 @@ public class Controller : MonoBehaviour
 
     void Start()
     {
+        // reference null check
+        if (Object.ReferenceEquals(audio, null))
+        {
+            Debug.LogWarning("GameObject: [" + gameObject.name + "] missing reference of audio manager");
+        }
+        if (Object.ReferenceEquals(characterScript, null))
+        {
+            Debug.LogWarning("GameObject: [" + gameObject.name + "] missing reference of characters");
+        }
+
         // Reset random seed to make sure system get different random number each play
         Random.seed = System.DateTime.Now.Millisecond;
 
@@ -41,7 +55,8 @@ public class Controller : MonoBehaviour
     public void CircleClicked(bool patternEnd)
     {
         FMODUnity.RuntimeManager.PlayOneShot("event:/NoteSFX");
-        audio.ChangeScore(scoreAdditionForCircleClick);
+        currentScore = audio.ChangeScore(scoreAdditionForCircleClick);
+        characterScript.UpdateScore(currentScore);
 
         if (patternEnd) PatternEnd();
     }
@@ -49,7 +64,8 @@ public class Controller : MonoBehaviour
     public void CircleMissed(bool patternEnd)
     {
         AudioManager.Instance.PlaySFX(soundEffectCircleMiss);
-        audio.ChangeScore(-scoreDeductionForCircleClick);
+        currentScore = audio.ChangeScore(-scoreDeductionForCircleClick);
+        characterScript.UpdateScore(currentScore);
 
         if (patternEnd) PatternEnd();
     }
