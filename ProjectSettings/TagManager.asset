@@ -38,18 +38,21 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Default
-    uniqueID: 0
-    locked: 0
   - name: background
     uniqueID: 1595096267
-    locked: 0
-  - name: brushstrokes
-    uniqueID: 3399295467
     locked: 0
   - name: backgroundfront
     uniqueID: 173816807
     locked: 0
   - name: village
     uniqueID: 1387965043
+    locked: 0
+  - name: brushstrokes
+    uniqueID: 3399295467
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: UI
+    uniqueID: 2708142703
     locked: 0

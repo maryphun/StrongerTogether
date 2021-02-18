@@ -16,7 +16,7 @@
 	</object>
 	<object class="GameParameter" id="{58cd4819-9c19-4863-b76d-25bfb9c1cb37}">
 		<property name="maximum">
-			<value>1000</value>
+			<value>100</value>
 		</property>
 		<property name="isGlobal">
 			<value>true</value>
@@ -25,7 +25,7 @@
 			<value>0</value>
 		</property>
 		<property name="seekSpeed">
-			<value>230</value>
+			<value>23</value>
 		</property>
 		<property name="isExposedRecursively">
 			<value>false</value>

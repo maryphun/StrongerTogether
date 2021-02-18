@@ -17,7 +17,7 @@ class FMODAudioManager : MonoBehaviour
 
     [Header("Fmod related")]
     [SerializeField, FMODUnity.EventRef] private string fModEvent;
-    [SerializeField, Range(0, 1)] private float scoreParam = 0f;
+    [SerializeField, Range(0, 1)] private float scoreParam = 1f;
 
     private void Start()
     {

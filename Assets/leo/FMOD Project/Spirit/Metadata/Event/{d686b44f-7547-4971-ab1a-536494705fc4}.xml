@@ -146,9 +146,6 @@
 		<property name="color">
 			<value>Purple</value>
 		</property>
-		<property name="volume">
-			<value>9</value>
-		</property>
 		<relationship name="modulators">
 			<destination>{d0194362-a5fe-45d4-b924-970bdbdc4ec1}</destination>
 		</relationship>
@@ -206,7 +203,7 @@
 			<value>volume</value>
 		</property>
 		<property name="amount">
-			<value>8</value>
+			<value>2.5</value>
 		</property>
 	</object>
 	<object class="SingleSound" id="{d18d3102-65af-4d74-99b0-a683c487f8e7}">
