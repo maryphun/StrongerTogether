@@ -11054,7 +11054,7 @@ PrefabInstance:
       objectReference: {fileID: 1338982304}
     - target: {fileID: 67507447846118288, guid: 71062bd8c4b66a34d8933ff4b79003a3, type: 3}
       propertyPath: patterns.Array.size
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 67507447846118288, guid: 71062bd8c4b66a34d8933ff4b79003a3, type: 3}
       propertyPath: patterns.Array.data[0]
@@ -11064,6 +11064,14 @@ PrefabInstance:
       propertyPath: patterns.Array.data[1]
       value: 
       objectReference: {fileID: 1713302398327157787, guid: eaef0677d5b24cc44ae1df67c6f19eec, type: 3}
+    - target: {fileID: 67507447846118288, guid: 71062bd8c4b66a34d8933ff4b79003a3, type: 3}
+      propertyPath: patterns.Array.data[2]
+      value: 
+      objectReference: {fileID: 1713302398327157787, guid: e10e9448c0a033142bdd1a4e1bf44c83, type: 3}
+    - target: {fileID: 67507447846118288, guid: 71062bd8c4b66a34d8933ff4b79003a3, type: 3}
+      propertyPath: patterns.Array.data[3]
+      value: 
+      objectReference: {fileID: 1713302398327157787, guid: 42e0e74b9ed1ad84989d191f676d903b, type: 3}
     - target: {fileID: 67507447846118288, guid: 71062bd8c4b66a34d8933ff4b79003a3, type: 3}
       propertyPath: scoreAdditionForPatternEnd
       value: 0
