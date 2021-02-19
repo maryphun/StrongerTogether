@@ -95,7 +95,7 @@ public class Controller : MonoBehaviour
 
     public void CircleMissed(bool patternEnd)
     {
-        AudioManager.Instance.PlaySFX(soundEffectCircleMiss);
+        FMODUnity.RuntimeManager.PlayOneShot("event:/MissSFX");
         currentScore = audio.ChangeScore(-scoreDeductionForCircleClick);
         characterScript.UpdateScore(currentScore);
         circleMissed = true;
@@ -109,6 +109,7 @@ public class Controller : MonoBehaviour
         {
             // never miss a circle in this pattern
             currentScore = audio.ChangeScore(scoreAdditionForPatternEnd);
+            FMODUnity.RuntimeManager.PlayOneShot("event:/FinishPatternSFX");
         }
 
         // Destroy Object

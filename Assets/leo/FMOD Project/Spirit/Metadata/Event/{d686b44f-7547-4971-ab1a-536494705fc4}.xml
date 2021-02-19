@@ -139,6 +139,7 @@
 			<destination>{767f72b9-9c8e-40f4-b19e-9160cd2fbdb0}</destination>
 			<destination>{314dece1-c45b-4a76-a05e-5d759fc98d21}</destination>
 			<destination>{6c1167c8-5afa-41a8-8361-9e95ac8045bc}</destination>
+			<destination>{7b6a6234-572c-4b48-81e7-d3a4166d9f5a}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{73ee6863-efe1-4466-a68f-4f84a0a2461c}" />
@@ -198,6 +199,7 @@
 			<destination>{cd44b969-0f0e-44ca-95b9-658300d0ce40}</destination>
 		</relationship>
 	</object>
+	<object class="Sidechain" id="{7b6a6234-572c-4b48-81e7-d3a4166d9f5a}" />
 	<object class="RandomizerModulator" id="{d0194362-a5fe-45d4-b924-970bdbdc4ec1}">
 		<property name="nameOfPropertyBeingModulated">
 			<value>volume</value>

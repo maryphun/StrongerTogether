@@ -84,7 +84,7 @@
 	</object>
 	<object class="EventMixerMaster" id="{903254a3-ce52-4715-9379-6971bea02923}">
 		<property name="volume">
-			<value>-5.5</value>
+			<value>-16</value>
 		</property>
 		<relationship name="effectChain">
 			<destination>{a240f005-a449-4f07-80d7-8c01f1bb3a4d}</destination>
@@ -135,6 +135,9 @@
 	<object class="MultiSound" id="{cb128ab9-02e2-43fd-897a-2cf2ad7ee3a1}">
 		<property name="name">
 			<value>PATTERN CHORDS</value>
+		</property>
+		<property name="pitch">
+			<value>24</value>
 		</property>
 		<property name="playlistMode">
 			<value>3</value>

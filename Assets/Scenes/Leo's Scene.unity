@@ -1265,6 +1265,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 511605741}
     - target: {fileID: 67507447846118288, guid: 71062bd8c4b66a34d8933ff4b79003a3, type: 3}
+      propertyPath: currentScore
+      value: 0.811
+      objectReference: {fileID: 0}
+    - target: {fileID: 67507447846118288, guid: 71062bd8c4b66a34d8933ff4b79003a3, type: 3}
       propertyPath: customCursor
       value: 
       objectReference: {fileID: 1791670032}
@@ -1302,7 +1306,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 67507447846118288, guid: 71062bd8c4b66a34d8933ff4b79003a3, type: 3}
       propertyPath: scoreAdditionForPatternEnd
-      value: 0.429
+      value: 0.018
       objectReference: {fileID: 0}
     - target: {fileID: 67507447846118288, guid: 71062bd8c4b66a34d8933ff4b79003a3, type: 3}
       propertyPath: scoreAdditionForCircleClick
@@ -1338,7 +1342,7 @@ PrefabInstance:
       objectReference: {fileID: 1713302398327157787, guid: 42e0e74b9ed1ad84989d191f676d903b, type: 3}
     - target: {fileID: 67507447846118288, guid: 71062bd8c4b66a34d8933ff4b79003a3, type: 3}
       propertyPath: scoreDeductionForCircleClick
-      value: 0.104
+      value: 0.048
       objectReference: {fileID: 0}
     - target: {fileID: 67507447846118289, guid: 71062bd8c4b66a34d8933ff4b79003a3, type: 3}
       propertyPath: m_RootOrder
