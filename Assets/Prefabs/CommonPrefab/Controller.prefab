@@ -43,14 +43,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e1a5192981b4224fac6cfb94f210735, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundEffectCircleClick: Click
   soundEffectCircleMiss: Miss
   circleMissTiming: 1
   patternFadeTime: 0.3
-  scoreAdditionForCircleClick: 0.25
+  patternSpawnInterval: 2
+  scoreAdditionForCircleClick: 0
   scoreDeductionForCircleClick: 0.1
-  scoreMultiplierForCombo: 0
-  scoreAdditionForPatternEnd: 0
+  scoreAdditionForPatternEnd: 0.019
   audio: {fileID: 0}
-  patterns:
-  - {fileID: 1713302398327157787, guid: ef06ad451f4b9e647a5ae67edbc17359, type: 3}
+  stage1Score: 0
+  patternsStage1: []
+  stage2Score: 0.2
+  patternsStage2: []
+  stage3Score: 0.4
+  patternsStage3: []
+  stage4Score: 0.8
+  patternsStage4: []
+  characterScript: {fileID: 0}
+  hands: {fileID: 0}
+  customCursor: {fileID: 0}
+  currentScore: 0
