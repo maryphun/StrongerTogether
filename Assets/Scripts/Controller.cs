@@ -14,7 +14,7 @@ public class Controller : MonoBehaviour
     [Header("Score")]
     [SerializeField, Range(0.0f, 1.0f)] private float scoreAdditionForCircleClick = 0.25f;
     [SerializeField, Range(0.0f, 1.0f)] private float scoreDeductionForCircleClick = 0.1f;
-    [SerializeField, Range(0.0f, 1.0f)] private float scoreMultiplierForCombo = 0.0f;
+    //[SerializeField, Range(0.0f, 1.0f)] private float scoreMultiplierForCombo = 0.0f;
     [SerializeField, Range(0.0f, 1.0f)] private float scoreAdditionForPatternEnd = 0.0f;
 
     [Header("References")]
@@ -37,6 +37,7 @@ public class Controller : MonoBehaviour
     private pattern currentPattern;
     private int combo;
     private int lastPattternIndex;
+    private bool circleMissed;
 
     void Awake()
     {
@@ -97,12 +98,19 @@ public class Controller : MonoBehaviour
         AudioManager.Instance.PlaySFX(soundEffectCircleMiss);
         currentScore = audio.ChangeScore(-scoreDeductionForCircleClick);
         characterScript.UpdateScore(currentScore);
+        circleMissed = true;
 
         if (patternEnd) PatternEnd();
     }
 
     private void PatternEnd()
     {
+        if (!circleMissed)
+        {
+            // never miss a circle in this pattern
+            currentScore = audio.ChangeScore(scoreAdditionForPatternEnd);
+        }
+
         // Destroy Object
         currentPattern.enabled = false;
         currentPattern.Animator.GetComponent<SpriteRenderer>().DOFade(0f, patternFadeTime);
@@ -115,6 +123,9 @@ public class Controller : MonoBehaviour
     IEnumerator SpawnPattern(float interval, int avoidIndex)
     {
         yield return new WaitForSeconds(interval);
+
+        // Reset variable
+        circleMissed = false;
 
         // Check what stage currently in and create a list of available patterns
         List<GameObject> patterns = new List<GameObject>();
