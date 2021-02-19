@@ -19,9 +19,17 @@ public class Controller : MonoBehaviour
 
     [Header("References")]
     [SerializeField] private FMODAudioManager audio;
-    [SerializeField] private GameObject[] patterns;
+    [SerializeField, Range(0.0f, 0.0f)] private float stage1Score = 0.0f;   // stage1 must always be 0.0f
+    [SerializeField] private GameObject[] patternsStage1;
+    [SerializeField, Range(0.0f, 1.0f)] private float stage2Score = 0.2f;
+    [SerializeField] private GameObject[] patternsStage2;
+    [SerializeField, Range(0.0f, 1.0f)] private float stage3Score = 0.4f;
+    [SerializeField] private GameObject[] patternsStage3;
+    [SerializeField, Range(0.0f, 1.0f)] private float stage4Score = 0.8f;
+    [SerializeField] private GameObject[] patternsStage4;
     [SerializeField] private Characters characterScript;
     [SerializeField] private GameObject hands;
+    [SerializeField] private FollowCursor customCursor;
 
     [Header("Debug")]
     [SerializeField, Range(0, 1)] private float currentScore = 0f;
@@ -53,6 +61,12 @@ public class Controller : MonoBehaviour
         hands.SetActive(false);
     }
 
+    private void Start()
+    {
+        // use custom cursor
+        customCursor.SetEnable(true);
+    }
+
     public void StartGame()
     {
         // Variable Initialization
@@ -60,7 +74,7 @@ public class Controller : MonoBehaviour
         currentPattern = null;
 
         // Instantiate First Pattern (avoid the last pattern for first spawn, if there are two pattern in this array, the first one always spawn first)
-        StartCoroutine(SpawnPattern(patternSpawnInterval, patterns.Length - 1));
+        StartCoroutine(SpawnPattern(patternSpawnInterval, patternsStage1.Length - 1));
 
         // BGM
         audio.StartBGM();
@@ -101,9 +115,17 @@ public class Controller : MonoBehaviour
     IEnumerator SpawnPattern(float interval, int avoidIndex)
     {
         yield return new WaitForSeconds(interval);
+
+        // Check what stage currently in and create a list of available patterns
+        List<GameObject> patterns = new List<GameObject>();
+        if (currentScore >= stage1Score) for (int i = 0; i < patternsStage1.Length; i++) patterns.Add(patternsStage1[i]);
+        if (currentScore >= stage2Score) for (int i = 0; i < patternsStage2.Length; i++) patterns.Add(patternsStage2[i]);
+        if (currentScore >= stage3Score) for (int i = 0; i < patternsStage3.Length; i++) patterns.Add(patternsStage3[i]);
+        if (currentScore >= stage4Score) for (int i = 0; i < patternsStage4.Length; i++) patterns.Add(patternsStage4[i]);
+
         // Random Numbers with an exception to avoid repeatation
         List<int> randomNumbers = new List<int>();
-        for (int i = 0; i < patterns.Length; i++)
+        for (int i = 0; i < patterns.Count; i++)
         {
             if (i != avoidIndex) randomNumbers.Add(i);
         }

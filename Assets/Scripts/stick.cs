@@ -15,13 +15,15 @@ public class stick : MonoBehaviour
         AudioManager.Instance.PlaySFX("Click", 0.3f);
         Destroy(GetComponent<Collider2D>());
 
-        transform.DOMoveY(transform.position.y - 13f, animationTime);
+        transform.DOMoveY(transform.position.y - 20f, animationTime);
         transform.DOScale(5f, animationTime);
 
         var light = transform.GetChild(0);
         light.SetParent(null);
         StartCoroutine(LightSwitch(0.0f, animationTime/2f, light.GetComponent<Light2D>()));
         Destroy(light.gameObject, animationTime / 2f);
+
+        FindObjectOfType<FollowCursor>().SetEnable(false);
 
         StartCoroutine(StartGameWithDelay(animationTime));
     }
