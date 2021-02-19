@@ -15,11 +15,11 @@ MonoBehaviour:
   Path: Assets/leo/FMOD Project/Spirit/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637493407829733727
+  lastModified: 637493689669653076
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 932
+    Value: 1024
   Exists: 1
 --- !u!114 &-7749078064787707938
 MonoBehaviour:
@@ -129,14 +129,62 @@ MonoBehaviour:
   EditorEvents:
   - {fileID: -7749078064787707938}
   - {fileID: -3671651193906053956}
+  - {fileID: 6336734802313726379}
+  - {fileID: 6372396202016542158}
   EditorParameters:
   - {fileID: -3732927947121159077}
   MasterBanks:
   - {fileID: 8812899057059419261}
   StringsBanks:
   - {fileID: -9127911786120542450}
-  stringsBankWriteTime: 637493407829733727
+  stringsBankWriteTime: 637493689669653076
   cacheVersion: 6
+--- !u!114 &6336734802313726379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/DarkAmbience
+  m_EditorClassIdentifier: 
+  Path: event:/DarkAmbience
+  guid: adf0e0beb3d6f54680e4e17b227c2a65
+  Banks:
+  - {fileID: 9035471772037167429}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 61709
+--- !u!114 &6372396202016542158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/MissSFX
+  m_EditorClassIdentifier: 
+  Path: event:/MissSFX
+  guid: e861f672630cd241b14a6c16875feead
+  Banks:
+  - {fileID: 8152783855575283498}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &8152783855575283498
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -152,7 +200,7 @@ MonoBehaviour:
   Path: Assets/leo/FMOD Project/Spirit/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 637493408443649281
+  lastModified: 637493689669703062
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -171,7 +219,7 @@ MonoBehaviour:
   Path: Assets/leo/FMOD Project/Spirit/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637493408446227086
+  lastModified: 637493689671233081
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -190,7 +238,7 @@ MonoBehaviour:
   Path: Assets/leo/FMOD Project/Spirit/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 637493408445659267
+  lastModified: 637493689671763080
   LoadResult: 0
   FileSizes: []
   Exists: 1
