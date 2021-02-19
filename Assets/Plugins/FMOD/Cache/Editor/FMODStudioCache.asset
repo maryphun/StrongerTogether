@@ -15,11 +15,9 @@ MonoBehaviour:
   Path: Assets/leo/FMOD Project/Spirit/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637493407829733727
+  lastModified: 637491524250000000
   LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 932
+  FileSizes: []
   Exists: 1
 --- !u!114 &-7749078064787707938
 MonoBehaviour:
@@ -135,7 +133,7 @@ MonoBehaviour:
   - {fileID: 8812899057059419261}
   StringsBanks:
   - {fileID: -9127911786120542450}
-  stringsBankWriteTime: 637493407829733727
+  stringsBankWriteTime: 637491524250000000
   cacheVersion: 6
 --- !u!114 &8152783855575283498
 MonoBehaviour:
@@ -152,7 +150,7 @@ MonoBehaviour:
   Path: Assets/leo/FMOD Project/Spirit/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 637493408443649281
+  lastModified: 637493272740000000
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -171,7 +169,7 @@ MonoBehaviour:
   Path: Assets/leo/FMOD Project/Spirit/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637493408446227086
+  lastModified: 637493272750000000
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -190,7 +188,7 @@ MonoBehaviour:
   Path: Assets/leo/FMOD Project/Spirit/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 637493408445659267
+  lastModified: 637492499300000000
   LoadResult: 0
   FileSizes: []
   Exists: 1
