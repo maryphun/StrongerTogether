@@ -43,9 +43,8 @@ public class stick : MonoBehaviour
         float lerp = 0.0f;
         float timeElapsed = 0.0f;
 
-        while (startValue != endValue)
+        for (timeElapsed = 0; timeElapsed < time; timeElapsed += Time.deltaTime)
         {
-            timeElapsed += Time.deltaTime;
             lerp = timeElapsed / time;
             target.intensity = Mathf.Lerp(startValue, endValue, lerp);
             yield return null;

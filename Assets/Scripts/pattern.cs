@@ -19,19 +19,21 @@ public class pattern : MonoBehaviour
     private int currentActiveIndex;
     private Controller controller;
     private float missDelayTime;
+    private bool isTutorial;
 
     public Animator Animator
     {
         get => animator;
     }
     
-    public void Activate(Controller referencePass, float missTimer)
+    public void Activate(Controller referencePass, float missTimer, bool isTutorial)
     {
         // Variable Initialize
         currentActiveIndex = 0;
         controller = referencePass;
         missDelayTime = missTimer;
-        
+        this.isTutorial = isTutorial;
+
         // Initialization
         for (int i = 0; i < circles.Length; i++)
         {
@@ -39,13 +41,18 @@ public class pattern : MonoBehaviour
             circles[i].timing = circles[i].timing * (2f - speedModifier);
         }
 
-        // Start Animation
-        animator.SetTrigger("Start");
-        animator.speed = animator.speed * speedModifier;
-        StartCoroutine(StartPattern());
+        // Only start animation after first click for tutorial mode
+        if (!isTutorial)
+        {
+            StartAnimation(0);
+        }
+        else
+        {
+            circles[0].sprite.DOColor(Color.white, 0.1f);
+        }
     }
 
-    IEnumerator StartPattern()
+    IEnumerator StartPattern(int startFrom)
     {
         int currentCount = 0;
         float elapsedTime = 0.0f;
@@ -82,7 +89,7 @@ public class pattern : MonoBehaviour
             controller.CircleMissed(currentActiveIndex == circles.Length);
         }
     }
-
+    
     private void Update()
     {
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Mathf.Abs(Camera.main.transform.position.z)));
@@ -90,6 +97,13 @@ public class pattern : MonoBehaviour
             || (Input.GetMouseButtonDown(0) && currentActiveIndex == 0))
             && Vector2.Distance(mousePos, circles[currentActiveIndex].sprite.transform.position) < 0.75f)
         {
+            // check for tutorial
+            if (currentActiveIndex == 0 && isTutorial)
+            {
+                StartAnimation(1);
+                FindObjectOfType<TutorialArrow>().StartAnimation();
+            }
+
             circles[currentActiveIndex].sprite.color = Color.white;
             StartCoroutine(FadeAfterDelay(0.2f, 0.1f, 0.0f, circles[currentActiveIndex].sprite));
             circles[currentActiveIndex].sprite.GetComponent<Animator>().Play("circlebreak");
@@ -105,5 +119,12 @@ public class pattern : MonoBehaviour
         yield return new WaitForSeconds(delay);
 
         target.DOFade(endValue, fadeTime);
+    }
+
+    private void StartAnimation(int skip)
+    {
+        animator.SetTrigger("Start");
+        animator.speed = animator.speed * speedModifier;
+        StartCoroutine(StartPattern(skip));
     }
 }
