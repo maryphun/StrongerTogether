@@ -12,6 +12,7 @@ public class Background : MonoBehaviour
     [SerializeField] private SpriteRenderer sun;
     [SerializeField] private Light2D light;
     [SerializeField] private Light2D lightAll;
+    [SerializeField] private SpriteRenderer title, credits, whitesquare;
 
     public void BackgroundAnimations()
     {
@@ -27,6 +28,7 @@ public class Background : MonoBehaviour
 
         light.gameObject.SetActive(true);
         lightAll.gameObject.SetActive(false);
+        whitesquare.gameObject.SetActive(false);
 
         yield return new WaitForSeconds(1f);
 
@@ -42,6 +44,15 @@ public class Background : MonoBehaviour
         lightAll.gameObject.SetActive(true);
 
         StartCoroutine(SunLight(5f, 45f, 1f, Color.white, 6f, lightAll));
+
+        yield return new WaitForSeconds(6.5f);
+
+        whitesquare.gameObject.SetActive(true);
+
+        yield return new WaitForSeconds(1f);
+
+        title.DOFade(1.0f, 4f);
+        credits.DOFade(1.0f, 4f);
     }
 
     IEnumerator SunLight(float intensity, float radius, float lightvolumeopacity, Color color, float time, Light2D target)
