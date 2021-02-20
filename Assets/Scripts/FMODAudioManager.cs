@@ -17,12 +17,18 @@ class FMODAudioManager : MonoBehaviour
 
     [Header("Fmod related")]
     [SerializeField, FMODUnity.EventRef] private string fModEvent;
+
+    [SerializeField, Range(0f, 0.01f)] private float ascendingSpeed = 0.001f;
     [SerializeField, Range(0, 1)] private float scoreParam = 1f;
+
+    [SerializeField, Range(0, 1)] private float score;
+    //float scorelerp;
 
     private void Start()
     {
         instance = FMODUnity.RuntimeManager.CreateInstance(fModEvent);
         
+        score = 0.0f;
         FMOD.Studio.EventDescription scoreEventDescription;
         instance.getDescription(out scoreEventDescription);
         FMOD.Studio.PARAMETER_DESCRIPTION scoreParameterDescription;
@@ -30,9 +36,19 @@ class FMODAudioManager : MonoBehaviour
         scoreParamID = scoreParameterDescription.id;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
-        FMODUnity.RuntimeManager.StudioSystem.setParameterByID(scoreParamID, scoreParam * 100f);
+        //scorelerp = Mathf.Min(1.0f, scorelerp + Time.deltaTime);
+        //score = Mathf.Lerp(score)
+
+        float lerpSpeed = ascendingSpeed;
+        if (scoreParam < score)
+        {
+            lerpSpeed = (score - scoreParam) / 7.5f;
+        }
+        score = Mathf.MoveTowards(score, scoreParam, ascendingSpeed);
+
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByID(scoreParamID, score * 100f);
         scoreVisualizer.value = scoreParam;
     }
 
