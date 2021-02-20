@@ -49,9 +49,9 @@ MonoBehaviour:
   patternFadeTime: 0.3
   patternSpawnInterval: 2
   victoryScore: 0.8
-  scoreAdditionForCircleClick: 0.015
+  scoreAdditionForCircleClick: 0.263
   scoreDeductionForCircleClick: 0.1
-  scoreAdditionForPatternEnd: 0.1
+  scoreAdditionForPatternEnd: 0.02
   audio: {fileID: 0}
   stage1Score: 0
   patternsStage1:
@@ -74,4 +74,5 @@ MonoBehaviour:
   customCursor: {fileID: 0}
   tutorialPattern: {fileID: 1713302398327157787, guid: ef06ad451f4b9e647a5ae67edbc17359, type: 3}
   tutorialArrow: {fileID: 7533677184285768099, guid: a1ef5d1d0932c6444b6902efc16acaca, type: 3}
+  background: {fileID: 0}
   currentScore: 0
