@@ -160,7 +160,7 @@ public class Controller : MonoBehaviour
         // Instantiate Next Pattern
         if (!inTutorial)
         {
-            StartCoroutine(SpawnPattern(patternSpawnInterval, lastPattternIndex));
+            StartCoroutine(SpawnPattern(patternSpawnInterval - currentScore, lastPattternIndex));
         }
         else
         {
@@ -193,9 +193,9 @@ public class Controller : MonoBehaviour
 
         // Check what stage currently in and create a list of available patterns
         List<GameObject> patterns = new List<GameObject>();
-        if (currentScore >= stage1Score) for (int i = 0; i < patternsStage1.Length; i++) patterns.Add(patternsStage1[i]);
-        if (currentScore >= stage2Score) for (int i = 0; i < patternsStage2.Length; i++) patterns.Add(patternsStage2[i]);
-        if (currentScore >= stage3Score) for (int i = 0; i < patternsStage3.Length; i++) patterns.Add(patternsStage3[i]);
+        if (currentScore >= stage1Score && currentScore < stage2Score) for (int i = 0; i < patternsStage1.Length; i++) patterns.Add(patternsStage1[i]);
+        if (currentScore >= stage2Score && currentScore < stage3Score) for (int i = 0; i < patternsStage2.Length; i++) patterns.Add(patternsStage2[i]);
+        if (currentScore >= stage3Score && currentScore < stage4Score) for (int i = 0; i < patternsStage3.Length; i++) patterns.Add(patternsStage3[i]);
         if (currentScore >= stage4Score) for (int i = 0; i < patternsStage4.Length; i++) patterns.Add(patternsStage4[i]);
         if (currentScore >= victoryScore)
         {

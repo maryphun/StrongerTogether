@@ -4,6 +4,7 @@ using UnityEngine;
 using DG.Tweening;
 using UnityEngine.Experimental.Rendering.Universal;
 
+[RequireComponent(typeof(SpriteRenderer))]
 public class Background : MonoBehaviour
 {
     [SerializeField] private SpriteRenderer skyblue;
@@ -14,6 +15,7 @@ public class Background : MonoBehaviour
     [SerializeField] private Light2D lightAll;
     [SerializeField] private SpriteRenderer title, credits, whitesquare;
     [SerializeField] private MoveX cloud1, cloud2, cloud3, cloud4;
+    [SerializeField] private Light2D globalLight;
 
     public void BackgroundAnimations()
     {
@@ -22,7 +24,6 @@ public class Background : MonoBehaviour
 
     IEnumerator Event()
     {
-        skyblue.DOFade(1.0f, 4f);
         mountain.transform.DOMoveY(-2.35f, 5f);
         mountain.DOFade(1.0f, 5.5f);
         mountain.DOFade(1.0f, 5f);
@@ -34,15 +35,18 @@ public class Background : MonoBehaviour
         yield return new WaitForSeconds(1f);
 
         ocean.transform.DOMoveY(-0.8f, 5f);
+        skyblue.DOFade(1.0f, 5f);
+        StartCoroutine(LightSwitch(0.75f, 8.5f, globalLight));
 
         cloud1.enabled = true;
         cloud2.enabled = true;
         cloud3.enabled = true;
         cloud4.enabled = true;
-
+        
         yield return new WaitForSeconds(4f);
 
         sun.transform.DOMoveY(1.65f, 5f);
+
 
         yield return new WaitForSeconds(6.5f);
 
@@ -81,6 +85,20 @@ public class Background : MonoBehaviour
 
             Light2D tmp = target;
 
+            yield return null;
+        }
+    }
+
+    IEnumerator LightSwitch(float endValue, float time, Light2D target)
+    {
+        float startValue = target.intensity;
+        float lerp = 0.0f;
+        float timeElapsed = 0.0f;
+
+        for (timeElapsed = 0; timeElapsed < time; timeElapsed += Time.deltaTime)
+        {
+            lerp = timeElapsed / time;
+            target.intensity = Mathf.Lerp(startValue, endValue, lerp);
             yield return null;
         }
     }
