@@ -1470,10 +1470,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7943787656260347592, guid: d34715439e401244e903be260130aea7, type: 3}
-      propertyPath: m_MaskInteraction
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 7943787656260347593, guid: d34715439e401244e903be260130aea7, type: 3}
       propertyPath: m_Name
       value: Wand
@@ -1485,14 +1481,6 @@ PrefabInstance:
     - target: {fileID: 7943787656260347599, guid: d34715439e401244e903be260130aea7, type: 3}
       propertyPath: m_RootOrder
       value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 7943787656260347599, guid: d34715439e401244e903be260130aea7, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.37155
-      objectReference: {fileID: 0}
-    - target: {fileID: 7943787656260347599, guid: d34715439e401244e903be260130aea7, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.37335
       objectReference: {fileID: 0}
     - target: {fileID: 7943787656260347599, guid: d34715439e401244e903be260130aea7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1533,10 +1521,6 @@ PrefabInstance:
     - target: {fileID: 7943787656260347599, guid: d34715439e401244e903be260130aea7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 49.708
-      objectReference: {fileID: 0}
-    - target: {fileID: 7943787656399648399, guid: d34715439e401244e903be260130aea7, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d34715439e401244e903be260130aea7, type: 3}

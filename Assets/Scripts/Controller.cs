@@ -6,6 +6,7 @@ using DG.Tweening;
 public class Controller : MonoBehaviour
 {
     [Header("Configuration")]
+    [SerializeField] private string mainMenuBGM = "ambience";
     [SerializeField] private string soundEffectCircleMiss = default;
     [SerializeField] private float circleMissTiming = 1.0f;
     [SerializeField, Range(0.0f, 0.6f)] private float patternFadeTime = 0.3f;
@@ -66,6 +67,9 @@ public class Controller : MonoBehaviour
     {
         // use custom cursor
         customCursor.SetEnable(true);
+
+        AudioManager.Instance.PlayMusicWithFade(mainMenuBGM, 2f);
+        AudioManager.Instance.SetMusicVolume(0.2f);
     }
 
     public void StartGame()

@@ -12,6 +12,7 @@ public class stick : MonoBehaviour
 
     private void OnMouseDown()
     {
+        AudioManager.Instance.StopMusicWithFade(2f);
         AudioManager.Instance.PlaySFX("Click", 0.3f);
         Destroy(GetComponent<Collider2D>());
 

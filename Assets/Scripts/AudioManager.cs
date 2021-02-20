@@ -112,6 +112,23 @@ public class AudioManager : MonoBehaviour
             StartCoroutine(UpdateMusicWithCrossFade(activeSource, newSource, transitionTime));
         }
     }
+    
+    public void StopMusic()
+    {
+        // Determine which music source is active
+        AudioSource activeSource = (firstMusicSourceIsPlaying) ? musicSource : musicSource2;
+
+        activeSource.Stop();
+    }
+
+    public void StopMusicWithFade(float time)
+    {
+        // Determine which music source is active
+        AudioSource activeSource = (firstMusicSourceIsPlaying) ? musicSource : musicSource2;
+
+        StartCoroutine(StopMusicWithFade(activeSource, time));
+    }
+
 
     private IEnumerator UpdateMusicWithFade(AudioSource activeSource, AudioClip newClip, float transitionTime)
     {
@@ -138,6 +155,19 @@ public class AudioManager : MonoBehaviour
             activeSource.volume = ((t / transitionTime) * musicVolume);
             yield return null;
         }
+    }
+
+    private IEnumerator StopMusicWithFade(AudioSource activeSource, float transitionTime)
+    {
+        float t = 0.0f;
+
+        for (t = 0; t < transitionTime; t += Time.deltaTime)
+        {
+            activeSource.volume = (musicVolume - ((t / transitionTime) * musicVolume));
+            yield return null;
+        }
+
+        activeSource.Stop();
     }
 
     private IEnumerator UpdateMusicWithCrossFade(AudioSource originalSource, AudioSource newSource, float transitionTime)
