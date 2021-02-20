@@ -519,7 +519,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cd1c061f8a201d45a4b24594dd15955, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeedPerFrame: 5
+  moveSpeedPerFrame: 2
 --- !u!95 &1476865373970415946
 Animator:
   serializedVersion: 3
@@ -1832,7 +1832,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cd1c061f8a201d45a4b24594dd15955, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeedPerFrame: -5
+  moveSpeedPerFrame: -2.15
 --- !u!95 &1223995717
 Animator:
   serializedVersion: 3
@@ -3481,7 +3481,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cd1c061f8a201d45a4b24594dd15955, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeedPerFrame: 2
+  moveSpeedPerFrame: 1.85
 --- !u!1 &4296908377456886580
 GameObject:
   m_ObjectHideFlags: 0
