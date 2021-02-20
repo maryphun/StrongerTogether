@@ -84,9 +84,6 @@ public class Controller : MonoBehaviour
         // Instantiate Tutrial Pattern
         StartCoroutine(SpawnTutorial(patternSpawnInterval));
 
-        // BGM
-        audio.StartBGM();
-
         // show hands
         hands.SetActive(true);
     }
@@ -123,6 +120,12 @@ public class Controller : MonoBehaviour
             {
                 inTutorial = false;
                 spawnedTutorialArrow.SelfDestroy(patternSpawnInterval/2f);
+
+                // Reset score
+                currentScore = audio.SetScore(0);
+
+                // BGM
+                audio.StartBGM();
             }
         }
 
@@ -178,6 +181,7 @@ public class Controller : MonoBehaviour
         {
             if (i != avoidIndex) randomNumbers.Add(i);
         }
+
         int random = randomNumbers[Random.Range(0, randomNumbers.Count)];
 
         lastPattternIndex = random; // save index to avoid repeatation later

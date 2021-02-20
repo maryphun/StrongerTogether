@@ -54,7 +54,7 @@ public class FollowCursor : MonoBehaviour
         {
             lerp = timeElapsed / time;
             target.intensity = Mathf.Lerp(startValue, endValue, lerp);
-            Debug.Log(lerp);
+            
             yield return null;
         }
 
