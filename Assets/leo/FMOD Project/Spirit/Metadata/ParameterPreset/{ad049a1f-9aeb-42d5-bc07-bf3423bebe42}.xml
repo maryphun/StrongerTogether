@@ -25,7 +25,13 @@
 			<value>0</value>
 		</property>
 		<property name="seekSpeed">
-			<value>8</value>
+			<value>1</value>
+		</property>
+		<property name="seekSpeedDescending">
+			<value>7</value>
+		</property>
+		<property name="seekSpeedAsymmetric">
+			<value>true</value>
 		</property>
 		<property name="isExposedRecursively">
 			<value>false</value>

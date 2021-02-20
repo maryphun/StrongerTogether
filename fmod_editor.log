@@ -7,7 +7,7 @@
 [LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x8000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 0000027435560858 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 00000152A82B7188 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -15,14 +15,407 @@
 [LOG] Thread::initThread                       : Init FMOD Studio bank load thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] Manager::init                            : done.
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[WRN] FMOD_OS_Net_Listen                       : Cannot listen for connections, port 9264 is currently in use.
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[WRN] FMOD_OS_Net_Listen                       : Cannot listen for connections, port 9264 is currently in use.
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[WRN] FMOD_OS_Net_Listen                       : Cannot listen for connections, port 9264 is currently in use.
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[WRN] FMOD_OS_Net_Listen                       : Cannot listen for connections, port 9264 is currently in use.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 4850880
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 13824
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000254EFFF418
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFE338E7B10
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFE338E7AE0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFE338E7BE0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFE338E7CA0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000151FEAE02F8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='sfx2', format=5, channels=2, frequency=48000, lengthbytes=21600, lengthpcm=90857, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.302826.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 4850880
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 13824
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000254EFFF418
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFE338E7B10
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFE338E7AE0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFE338E7BE0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFE338E7CA0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000151FEAE02F8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='sfx5', format=5, channels=2, frequency=48000, lengthbytes=22464, lengthpcm=93856, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.410706.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 4850880
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 13824
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000254EFFF418
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFE338E7B10
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFE338E7AE0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFE338E7BE0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFE338E7CA0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000151FEAE02F8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='sfx1', format=5, channels=2, frequency=48000, lengthbytes=20544, lengthpcm=82285, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.194550.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 4850880
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 13824
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000254EFFF418
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFE338E7B10
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFE338E7AE0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFE338E7BE0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFE338E7CA0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000151FEAE02F8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='sfx4', format=5, channels=2, frequency=48000, lengthbytes=23104, lengthpcm=92571, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.427765.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 4850880
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 13824
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000254EFFF418
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFE338E7B10
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFE338E7AE0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFE338E7BE0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFE338E7CA0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000151FEAE02F8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='sfx3', format=5, channels=2, frequency=48000, lengthbytes=23488, lengthpcm=94285, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.430298.
+[LOG] SystemI::createSound                     : filename = Assets\leo\FMOD Project\Spirit\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] Thread::initThread                       : Init FMOD nonblocking thread (0). Affinity: 0x8000000000000003, Priority: 0xFFFF7FFC, Stack Size: 114688, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
+[LOG] SystemI::createSound                     : setdata soundi = 00000151FB4A3AD8 : node = 00000151F94B1500
+[LOG] SystemI::createSound                     : add node to async list : head = 00000151FE16C8E8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000151FB4A3AD8
+[LOG] SystemI::createSound                     : filename = Assets\leo\FMOD Project\Spirit\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\leo\FMOD Project\Spirit\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSound                     :     setdata soundi = 00000151FB4A50C8 : node = 00000151FB43E0E0
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSound                     :     add node to async list : head = 00000151FE16C8E8.  list count = 0
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4850880
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13824
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000151F94B1610
+[LOG] SystemI::createSound                     :     filename = Assets\leo\FMOD Project\Spirit\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSound                     :     setdata soundi = 00000151FB4A44F8 : node = 00000151FB440660
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSound                     :     add node to async list : head = 00000151FE16C8E8.  list count = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='plucks', format=5, channels=2, frequency=48000, lengthbytes=237024, lengthpcm=755410, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.434509.
+[LOG] SystemI::createSound                     :     filename = Assets\leo\FMOD Project\Spirit\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 00000151FB4A4D68 : node = 00000151FB440DE0
+[LOG] SystemI::createSound                     :     add node to async list : head = 00000151FE16C8E8.  list count = 2
+[LOG] Thread::initThread                       :     Init FMOD file thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFC, Stack Size: 49152, Semaphore: No, Sleep Time: 10, Looping: Yes.
+[LOG] SystemI::createSound                     :     filename = Assets\leo\FMOD Project\Spirit\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 00000151FBC25388 : node = 00000151FB441060
+[LOG] SystemI::createSound                     : add node to async list : head = 00000151FE16C8E8.  list count = 3
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000151FB4A3AD8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000151FB4A50C8
+[LOG] SystemI::createSound                     : filename = Assets\leo\FMOD Project\Spirit\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\leo\FMOD Project\Spirit\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4850880
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13824
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000151FB43E1F0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSound                     :     setdata soundi = 00000151FBC25538 : node = 000001502038CD60
+[LOG] SystemI::createSound                     :     add node to async list : head = 00000151FE16C8E8.  list count = 3
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='choir', format=5, channels=2, frequency=48000, lengthbytes=432320, lengthpcm=1510820, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.999969.
+[LOG] SystemI::createSound                     :     filename = Assets\leo\FMOD Project\Spirit\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 00000151FBC24B18 : node = 00000151FC78B010
+[LOG] SystemI::createSound                     :     add node to async list : head = 00000151FE16C8E8.  list count = 4
+[LOG] SystemI::createSound                     :     filename = Assets\leo\FMOD Project\Spirit\Build\Desktop/Master.bank : mode 02010082
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000151FB4A50C8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000151FB4A44F8
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\leo\FMOD Project\Spirit\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4850880
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13824
+[LOG] SystemI::createSound                     :     setdata soundi = 00000151FBC24CC8 : node = 00000152D001C380
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000151FB440770
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSound                     :     add node to async list : head = 00000151FE16C8E8.  list count = 4
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSound                     :     filename = Assets\leo\FMOD Project\Spirit\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='violin', format=5, channels=2, frequency=48000, lengthbytes=508352, lengthpcm=1510820, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.999969.
+[LOG] SystemI::createSound                     :     setdata soundi = 00000151FBC23F48 : node = 00000152D001ECC0
+[LOG] SystemI::createSound                     :     add node to async list : head = 00000151FE16C8E8.  list count = 5
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000151FB4A44F8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000151FB4A4D68
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\leo\FMOD Project\Spirit\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4850880
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13824
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 336096
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000151FB440EF0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 10048
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000254EFFF418
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='guitar', format=5, channels=2, frequency=48000, lengthbytes=399648, lengthpcm=1510820, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.604370.
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->useropen           = 00007FFE338E7B10
+[LOG] SystemI::createSoundInternal             :     exinfo->userclose          = 00007FFE338E7AE0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFE338E7BE0
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000151FB4A4D68
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFE338E7CA0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000151FBC25388
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000151FEAE3688
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\leo\FMOD Project\Spirit\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::DSPCodecPoolRegister            :     register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4850880
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13824
+[LOG] SystemI::createSoundInternal             :     Sample 0/1: name='sfxfinish4', format=5, channels=2, frequency=48000, lengthbytes=46176, lengthpcm=186000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.504425.
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000151FB441170
+[LOG] SystemI::createSoundInternal             :     Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 336096
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='accordion', format=5, channels=2, frequency=48000, lengthbytes=477664, lengthpcm=1513430, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.287598.
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 10048
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000254EFFF418
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFE338E7B10
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000151FBC25388
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFE338E7AE0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000151FBC25538
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFE338E7BE0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFE338E7CA0
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\leo\FMOD Project\Spirit\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->fileuserdata       = 00000151FEAE3688
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4850880
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13824
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001502038CE70
+[LOG] SystemI::DSPCodecPoolRegister            :     register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Sample 0/1: name='sfxfinish1', format=5, channels=2, frequency=48000, lengthbytes=41824, lengthpcm=171642, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.488983.
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='pizzi', format=5, channels=2, frequency=48000, lengthbytes=405888, lengthpcm=1510820, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.781464.
+[LOG] SystemI::createSoundInternal             :     Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 336096
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 10048
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000151FBC25538
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000151FBC24B18
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000254EFFF418
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFE338E7B10
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFE338E7AE0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFE338E7BE0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFE338E7CA0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000151FEAE3688
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\leo\FMOD Project\Spirit\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4850880
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13824
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000151FC78B120
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            :     register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='actionviolins', format=5, channels=2, frequency=48000, lengthbytes=903232, lengthpcm=3021639, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.728333.
+[LOG] SystemI::createSoundInternal             :     Sample 0/1: name='sfxfinish2', format=5, channels=2, frequency=48000, lengthbytes=44448, lengthpcm=188142, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.511383.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000151FBC24B18
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000151FBC24CC8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\leo\FMOD Project\Spirit\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4850880
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13824
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000152D001C490
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 336096
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 10048
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='bassndrums', format=5, channels=2, frequency=48000, lengthbytes=450848, lengthpcm=1510820, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.888763.
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000254EFFF418
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000151FBC24CC8
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFE338E7B10
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000151FBC23F48
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFE338E7AE0
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\leo\FMOD Project\Spirit\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->userread           = 00007FFE338E7BE0
+[LOG] SystemI::createSoundInternal             :     exinfo->userseek           = 00007FFE338E7CA0
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4850880
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13824
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000152D001EDD0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->fileuserdata       = 00000151FEAE3688
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='brass', format=5, channels=2, frequency=48000, lengthbytes=921440, lengthpcm=3021639, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.798645.
+[LOG] SystemI::DSPCodecPoolRegister            :     register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             :     Sample 0/1: name='sfxfinish3', format=5, channels=2, frequency=48000, lengthbytes=43968, lengthpcm=184714, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.464447.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000151FBC23F48
+[WRN] EventInstance::update                    : Event {55b728fb-f204-426f-9870-d74e92db9e44} waited 68 milliseconds for sample data to load.  Preload sample data to avoid this delay.
+[WRN] FMOD_OS_Net_Listen                       : Cannot listen for connections, port 9264 is currently in use.
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000151FBC240F8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000151FBC240F8
+[WRN] FMOD_OS_Net_Listen                       : Cannot listen for connections, port 9264 is currently in use.
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000151FB4A46A8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000151FB4A46A8
+[WRN] EventInstance::update                    : Event {d686b44f-7547-4971-ab1a-536494705fc4} has waited 10.0 seconds for DSP graph to go idle - check for plugins that may be keeping it active
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000151FBC24E78
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000151FBC24E78
+[WRN] EventInstance::update                    : Event {d686b44f-7547-4971-ab1a-536494705fc4} has waited 10.0 seconds for DSP graph to go idle - check for plugins that may be keeping it active
+[WRN] EventInstance::update                    : Event {d686b44f-7547-4971-ab1a-536494705fc4} has waited 10.0 seconds for DSP graph to go idle - check for plugins that may be keeping it active
+[WRN] FMOD_OS_Net_Listen                       : Cannot listen for connections, port 9264 is currently in use.
+[WRN] EventInstance::update                    : Event {d686b44f-7547-4971-ab1a-536494705fc4} has waited 10.0 seconds for DSP graph to go idle - check for plugins that may be keeping it active
+[WRN] EventInstance::update                    : Event {d686b44f-7547-4971-ab1a-536494705fc4} has waited 10.0 seconds for DSP graph to go idle - check for plugins that may be keeping it active
+[WRN] EventInstance::update                    : Event {d686b44f-7547-4971-ab1a-536494705fc4} has waited 10.0 seconds for DSP graph to go idle - check for plugins that may be keeping it active
+[WRN] EventInstance::update                    : Event {d686b44f-7547-4971-ab1a-536494705fc4} has waited 10.0 seconds for DSP graph to go idle - check for plugins that may be keeping it active
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 336096
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 10048
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000254EFFF418
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFE338E7B10
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFE338E7AE0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFE338E7BE0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFE338E7CA0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000151FEAE3058
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='sfxmiss', format=5, channels=2, frequency=48000, lengthbytes=9600, lengthpcm=36214, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.760498.
+[WRN] FMOD_OS_Net_Listen                       : Cannot listen for connections, port 9264 is currently in use.
+[WRN] EventInstance::update                    : Event {d686b44f-7547-4971-ab1a-536494705fc4} has waited 10.0 seconds for DSP graph to go idle - check for plugins that may be keeping it active
+[WRN] EventInstance::update                    : Event {d686b44f-7547-4971-ab1a-536494705fc4} has waited 10.0 seconds for DSP graph to go idle - check for plugins that may be keeping it active
+[WRN] EventInstance::update                    : Event {d686b44f-7547-4971-ab1a-536494705fc4} has waited 10.0 seconds for DSP graph to go idle - check for plugins that may be keeping it active
+[WRN] FMOD_OS_Net_Listen                       : Cannot listen for connections, port 9264 is currently in use.
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000151FBC240F8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000151FBC240F8
+[WRN] EventInstance::update                    : Event {d686b44f-7547-4971-ab1a-536494705fc4} has waited 10.0 seconds for DSP graph to go idle - check for plugins that may be keeping it active
+[WRN] EventInstance::update                    : Event {d686b44f-7547-4971-ab1a-536494705fc4} has waited 10.0 seconds for DSP graph to go idle - check for plugins that may be keeping it active
+[LOG] SoundI::release                          :  (00000151F4A2B058)
+[LOG] SoundI::release                          :     sfxmiss (00000151F96107B8)
+[LOG] SoundI::release                          :  (00000151F4A2C478)
+[LOG] SoundI::release                          :     sfxfinish1 (00000151F96131F8)
+[LOG] SoundI::release                          : brass (00000151FBC23F48)
+[LOG] SoundI::release                          :     brass (00000151F9610618)
+[LOG] SoundI::release                          :     brass (00000151FBC24608)
+[LOG] SoundI::release                          : bassndrums (00000151FBC24CC8)
+[LOG] SoundI::release                          :     bassndrums (00000151F9613878)
+[LOG] SoundI::release                          :     bassndrums (00000151FBC251D8)
+[LOG] SoundI::release                          : actionviolins (00000151FBC24B18)
+[LOG] SoundI::release                          :     actionviolins (00000151F9613398)
+[LOG] SoundI::release                          :     actionviolins (00000151FBC24458)
+[LOG] SoundI::release                          : pizzi (00000151FBC25538)
+[LOG] SoundI::release                          :     pizzi (00000151F9612EB8)
+[LOG] SoundI::release                          :     pizzi (00000151FBC24E78)
+[LOG] SoundI::release                          : accordion (00000151FBC25388)
+[LOG] SoundI::release                          :     accordion (00000151F9612B78)
+[LOG] SoundI::release                          :     accordion (00000151FBC240F8)
+[LOG] SoundI::release                          : guitar (00000151FB4A4D68)
+[LOG] SoundI::release                          :     guitar (00000151F96129D8)
+[LOG] SoundI::release                          :     guitar (00000151FBC23D98)
+[LOG] SoundI::release                          : violin (00000151FB4A44F8)
+[LOG] SoundI::release                          :     violin (00000151F9612838)
+[LOG] SoundI::release                          :     violin (00000151FBC25028)
+[LOG] SoundI::release                          : choir (00000151FB4A50C8)
+[LOG] SoundI::release                          :     choir (00000151F96124F8)
+[LOG] SoundI::release                          :     choir (00000151FBC23888)
+[LOG] SoundI::release                          : plucks (00000151FB4A3AD8)
+[LOG] SoundI::release                          :     plucks (00000151F9612018)
+[LOG] SoundI::release                          :     plucks (00000151FB4A46A8)
+[LOG] SoundI::release                          :  (00000151F4A29AC8)
+[LOG] SoundI::release                          :     sfx1 (00000151F9612698)
+[LOG] SoundI::release                          :  (00000151F4A2C198)
+[LOG] SoundI::release                          :     sfx2 (00000151F9612358)
+[LOG] SoundI::release                          :  (00000151F4A2AC08)
+[LOG] SoundI::release                          :     sfx3 (00000151F9612D18)
+[LOG] SoundI::release                          :  (00000151F4A2E9D8)
+[LOG] SoundI::release                          :     sfx4 (00000151F9610C98)
+[LOG] SoundI::release                          :  (00000151F4A2AEE8)
+[LOG] SoundI::release                          :     sfx5 (00000151F9611178)
+[LOG] SoundI::release                          :  (00000151F4A2A088)
+[LOG] SoundI::release                          :     sfxfinish2 (00000151F9613538)
+[LOG] SoundI::release                          :  (00000151F4A2CA38)
+[LOG] SoundI::release                          :     sfxfinish3 (00000151F9610AF8)
+[LOG] SoundI::release                          :  (00000151F4A2C8C8)
+[LOG] SoundI::release                          :     sfxfinish4 (00000151F9611998)
+[LOG] Thread::callback                         : FMOD Studio update thread finished.
+[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
+[LOG] LiveUpdate::release                      : 
+[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
+[LOG] Thread::callback                         : FMOD stream thread finished.
+[LOG] Thread::callback                         : FMOD mixer thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] SystemI::close                           : Closed.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Thread::callback                         : FMOD Studio sample load thread finished.
 [LOG] LiveUpdate::release                      : 
@@ -30,3 +423,5 @@
 [LOG] Thread::callback                         : FMOD stream thread finished.
 [LOG] Thread::callback                         : FMOD mixer thread finished.
 [LOG] SystemI::close                           : Closed.
+[LOG] Thread::callback                         : FMOD nonblocking thread (0) finished.
+[LOG] Thread::callback                         : FMOD file thread finished.
