@@ -1178,6 +1178,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Controller
       objectReference: {fileID: 0}
+    - target: {fileID: 67507447846118286, guid: 71062bd8c4b66a34d8933ff4b79003a3, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 67507447846118288, guid: 71062bd8c4b66a34d8933ff4b79003a3, type: 3}
       propertyPath: audio
       value: 
@@ -1195,13 +1199,29 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2041519219}
     - target: {fileID: 67507447846118288, guid: 71062bd8c4b66a34d8933ff4b79003a3, type: 3}
+      propertyPath: scoreAdditionForPatternEnd
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 67507447846118288, guid: 71062bd8c4b66a34d8933ff4b79003a3, type: 3}
+      propertyPath: scoreAdditionForCircleClick
+      value: 0.001
+      objectReference: {fileID: 0}
+    - target: {fileID: 67507447846118288, guid: 71062bd8c4b66a34d8933ff4b79003a3, type: 3}
       propertyPath: patternsStage1.Array.data[1]
       value: 
       objectReference: {fileID: 1713302398327157787, guid: e10e9448c0a033142bdd1a4e1bf44c83, type: 3}
     - target: {fileID: 67507447846118288, guid: 71062bd8c4b66a34d8933ff4b79003a3, type: 3}
+      propertyPath: patternsStage2.Array.data[0]
+      value: 
+      objectReference: {fileID: 1713302398327157787, guid: 3d63bdb980e5d0f48919f6b0acc4497d, type: 3}
+    - target: {fileID: 67507447846118288, guid: 71062bd8c4b66a34d8933ff4b79003a3, type: 3}
       propertyPath: patternsStage2.Array.data[1]
       value: 
       objectReference: {fileID: 1713302398327157787, guid: eaef0677d5b24cc44ae1df67c6f19eec, type: 3}
+    - target: {fileID: 67507447846118288, guid: 71062bd8c4b66a34d8933ff4b79003a3, type: 3}
+      propertyPath: scoreDeductionForCircleClick
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 67507447846118289, guid: 71062bd8c4b66a34d8933ff4b79003a3, type: 3}
       propertyPath: m_RootOrder
       value: 5
