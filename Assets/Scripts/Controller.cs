@@ -225,7 +225,6 @@ public class Controller : MonoBehaviour
     {
         Debug.Log("end game");
         background.BackgroundAnimations();
-        audio.SetScore(0.99f);
         StartCoroutine(IncreaseScoreOverTime(10f, 1.0f));
 
         AudioManager.Instance.PlayMusicWithFade("creditsaudio", 15f);
@@ -245,7 +244,6 @@ public class Controller : MonoBehaviour
         }
 
         currentScore = targetScore;
-        
         characterScript.UpdateScore(currentScore);
     }
 }

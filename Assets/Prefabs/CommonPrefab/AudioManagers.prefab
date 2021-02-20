@@ -46,7 +46,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreVisualizer: {fileID: 0}
   fModEvent: event:/Music
+  ascendingSpeed: 0.0005
   scoreParam: 0
+  score: 0
 --- !u!114 &8538029206073658411
 MonoBehaviour:
   m_ObjectHideFlags: 0
