@@ -54,6 +54,7 @@ public class Background : MonoBehaviour
         yield return new WaitForSeconds(6.5f);
 
         whitesquare.gameObject.SetActive(true);
+        FindObjectOfType<FMODAudioManager>().SetScore(1f);
 
         yield return new WaitForSeconds(1f);
 

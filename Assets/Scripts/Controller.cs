@@ -225,7 +225,10 @@ public class Controller : MonoBehaviour
     {
         Debug.Log("end game");
         background.BackgroundAnimations();
+        audio.SetScore(0.99f);
         StartCoroutine(IncreaseScoreOverTime(10f, 1.0f));
+
+        AudioManager.Instance.PlayMusicWithFade("creditsaudio", 15f);
     }
 
     IEnumerator IncreaseScoreOverTime(float time, float targetScore)
@@ -235,13 +238,14 @@ public class Controller : MonoBehaviour
         {
             float lerp = elapsedTime / time;
 
-            currentScore = audio.SetScore(Mathf.Lerp(victoryScore, targetScore, lerp));
+            currentScore = Mathf.Lerp(victoryScore, targetScore, lerp);
             characterScript.UpdateScore(currentScore);
 
             yield return new WaitForEndOfFrame();
         }
 
         currentScore = targetScore;
+        
         characterScript.UpdateScore(currentScore);
     }
 }
