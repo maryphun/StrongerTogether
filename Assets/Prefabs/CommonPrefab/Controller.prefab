@@ -48,18 +48,18 @@ MonoBehaviour:
   circleMissTiming: 1
   patternFadeTime: 0.3
   patternSpawnInterval: 2
-  scoreAdditionForCircleClick: 0.016
-  scoreDeductionForCircleClick: 0.104
-  scoreAdditionForPatternEnd: 0
+  scoreAdditionForCircleClick: 0.001
+  scoreDeductionForCircleClick: 0.1
+  scoreAdditionForPatternEnd: 0.05
   audio: {fileID: 0}
   stage1Score: 0
   patternsStage1:
   - {fileID: 1713302398327157787, guid: ef06ad451f4b9e647a5ae67edbc17359, type: 3}
-  - {fileID: 1713302398327157787, guid: eaef0677d5b24cc44ae1df67c6f19eec, type: 3}
+  - {fileID: 1713302398327157787, guid: e10e9448c0a033142bdd1a4e1bf44c83, type: 3}
   stage2Score: 0.2
   patternsStage2:
   - {fileID: 1713302398327157787, guid: 3d63bdb980e5d0f48919f6b0acc4497d, type: 3}
-  - {fileID: 1713302398327157787, guid: e10e9448c0a033142bdd1a4e1bf44c83, type: 3}
+  - {fileID: 1713302398327157787, guid: eaef0677d5b24cc44ae1df67c6f19eec, type: 3}
   stage3Score: 0.4
   patternsStage3:
   - {fileID: 1713302398327157787, guid: 800ae114d8103ef49945e737d65323d7, type: 3}
