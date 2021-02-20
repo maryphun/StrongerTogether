@@ -34,6 +34,7 @@ public class Controller : MonoBehaviour
     [SerializeField] private GameObject hands;
     [SerializeField] private FollowCursor customCursor;
     [SerializeField] private GameObject tutorialPattern, tutorialArrow;
+    [SerializeField] private Background background;
 
     [Header("Debug")]
     [SerializeField, Range(0, 1)] private float currentScore = 0f;
@@ -129,6 +130,7 @@ public class Controller : MonoBehaviour
 
                 // Reset score
                 currentScore = audio.SetScore(0);
+                characterScript.UpdateScore(currentScore);
 
                 // BGM
                 audio.StartBGM();
@@ -222,6 +224,7 @@ public class Controller : MonoBehaviour
     private void EndGame()
     {
         Debug.Log("end game");
+        background.BackgroundAnimations();
         StartCoroutine(IncreaseScoreOverTime(10f, 1.0f));
     }
 
@@ -233,8 +236,12 @@ public class Controller : MonoBehaviour
             float lerp = elapsedTime / time;
 
             currentScore = audio.SetScore(Mathf.Lerp(victoryScore, targetScore, lerp));
+            characterScript.UpdateScore(currentScore);
 
             yield return new WaitForEndOfFrame();
         }
+
+        currentScore = targetScore;
+        characterScript.UpdateScore(currentScore);
     }
 }
