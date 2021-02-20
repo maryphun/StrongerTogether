@@ -13,6 +13,7 @@ public class Background : MonoBehaviour
     [SerializeField] private Light2D light;
     [SerializeField] private Light2D lightAll;
     [SerializeField] private SpriteRenderer title, credits, whitesquare;
+    [SerializeField] private MoveX cloud1, cloud2, cloud3, cloud4;
 
     public void BackgroundAnimations()
     {
@@ -33,6 +34,11 @@ public class Background : MonoBehaviour
         yield return new WaitForSeconds(1f);
 
         ocean.transform.DOMoveY(-0.8f, 5f);
+
+        cloud1.enabled = true;
+        cloud2.enabled = true;
+        cloud3.enabled = true;
+        cloud4.enabled = true;
 
         yield return new WaitForSeconds(4f);
 
