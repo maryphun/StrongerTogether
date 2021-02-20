@@ -11,6 +11,7 @@ public class Controller : MonoBehaviour
     [SerializeField] private float circleMissTiming = 1.0f;
     [SerializeField, Range(0.0f, 0.6f)] private float patternFadeTime = 0.3f;
     [SerializeField, Range(0.0f, 5.0f)] private float patternSpawnInterval = 2f;
+    [SerializeField, Range(0.01f, 0.99f)] private float victoryScore = 0.8f; 
 
     [Header("Score")]
     [SerializeField, Range(0.0f, 1.0f)] private float scoreAdditionForCircleClick = 0.25f;
@@ -26,8 +27,9 @@ public class Controller : MonoBehaviour
     [SerializeField] private GameObject[] patternsStage2;
     [SerializeField, Range(0.0f, 1.0f)] private float stage3Score = 0.4f;
     [SerializeField] private GameObject[] patternsStage3;
-    [SerializeField, Range(0.0f, 1.0f)] private float stage4Score = 0.8f;
+    [SerializeField, Range(0.0f, 1.0f)] private float stage4Score = 0.6f;
     [SerializeField] private GameObject[] patternsStage4;
+    [SerializeField] private GameObject finalPattern = default;
     [SerializeField] private Characters characterScript;
     [SerializeField] private GameObject hands;
     [SerializeField] private FollowCursor customCursor;
@@ -42,6 +44,7 @@ public class Controller : MonoBehaviour
     private bool circleMissed;
     private bool inTutorial;
     private TutorialArrow spawnedTutorialArrow;
+    private bool isFinale;
 
     void Awake()
     {
@@ -91,8 +94,11 @@ public class Controller : MonoBehaviour
     public void CircleClicked(bool patternEnd)
     {
         FMODUnity.RuntimeManager.PlayOneShot("event:/NoteSFX");
-        currentScore = audio.ChangeScore(scoreAdditionForCircleClick);
-        characterScript.UpdateScore(currentScore);
+        if (!isFinale)
+        {
+            currentScore = audio.ChangeScore(scoreAdditionForCircleClick, victoryScore);
+            characterScript.UpdateScore(currentScore);
+        }
 
         if (patternEnd) PatternEnd();
     }
@@ -112,14 +118,14 @@ public class Controller : MonoBehaviour
         if (!circleMissed)
         {
             // never miss a circle in this pattern
-            currentScore = audio.ChangeScore(scoreAdditionForPatternEnd);
+            currentScore = audio.ChangeScore(scoreAdditionForPatternEnd, victoryScore);
             FMODUnity.RuntimeManager.PlayOneShot("event:/FinishPatternSFX");
 
             // get out of tutorial mode if it's in
             if (inTutorial)
             {
                 inTutorial = false;
-                spawnedTutorialArrow.SelfDestroy(patternSpawnInterval/2f);
+                spawnedTutorialArrow.SelfDestroy(patternSpawnInterval / 2f);
 
                 // Reset score
                 currentScore = audio.SetScore(0);
@@ -133,6 +139,21 @@ public class Controller : MonoBehaviour
         currentPattern.enabled = false;
         currentPattern.Animator.GetComponent<SpriteRenderer>().DOFade(0f, patternFadeTime);
         Destroy(currentPattern.gameObject, patternFadeTime);
+
+        // Determine if it's the finale
+        if (isFinale)
+        {
+            if (!circleMissed)
+            {
+                EndGame();
+                // this game end here. not spawning the next pattern
+                return;
+            }
+            else
+            {
+                isFinale = false;
+            }
+        }
 
         // Instantiate Next Pattern
         if (!inTutorial)
@@ -153,13 +174,13 @@ public class Controller : MonoBehaviour
         // Reset variable
         circleMissed = false;
         inTutorial = true;
-        
+
         // Instantiation
         currentPattern = Instantiate(tutorialPattern).GetComponent<pattern>();
         currentPattern.Activate(this, circleMissTiming, inTutorial);
         spawnedTutorialArrow = Instantiate(tutorialArrow).GetComponent<TutorialArrow>();
     }
-    
+
     IEnumerator SpawnPattern(float interval, int avoidIndex)
     {
         yield return new WaitForSeconds(interval);
@@ -174,6 +195,13 @@ public class Controller : MonoBehaviour
         if (currentScore >= stage2Score) for (int i = 0; i < patternsStage2.Length; i++) patterns.Add(patternsStage2[i]);
         if (currentScore >= stage3Score) for (int i = 0; i < patternsStage3.Length; i++) patterns.Add(patternsStage3[i]);
         if (currentScore >= stage4Score) for (int i = 0; i < patternsStage4.Length; i++) patterns.Add(patternsStage4[i]);
+        if (currentScore >= victoryScore)
+        {
+            // final pattern
+            patterns.Clear();
+            patterns.Add(finalPattern);
+            isFinale = true;
+        }
 
         // Random Numbers with an exception to avoid repeatation
         List<int> randomNumbers = new List<int>();
@@ -189,5 +217,24 @@ public class Controller : MonoBehaviour
         // Instantiation
         currentPattern = Instantiate(patterns[random]).GetComponent<pattern>();
         currentPattern.Activate(this, circleMissTiming, inTutorial);
+    }
+
+    private void EndGame()
+    {
+        Debug.Log("end game");
+        StartCoroutine(IncreaseScoreOverTime(10f, 1.0f));
+    }
+
+    IEnumerator IncreaseScoreOverTime(float time, float targetScore)
+    {
+        float elapsedTime = 0.0f;
+        for (elapsedTime = 0; elapsedTime < time; elapsedTime += Time.fixedDeltaTime)
+        {
+            float lerp = elapsedTime / time;
+
+            currentScore = audio.SetScore(Mathf.Lerp(victoryScore, targetScore, lerp));
+
+            yield return new WaitForEndOfFrame();
+        }
     }
 }

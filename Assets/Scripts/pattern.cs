@@ -63,7 +63,7 @@ public class pattern : MonoBehaviour
             if (elapsedTime >= circles[currentCount].timing)
             {
                 circles[currentCount].sprite.DOColor(Color.white, 0.1f);
-                float bonusTimeMultiplier = (currentCount == 0) ? 1.5f : 1.0f;
+                float bonusTimeMultiplier = (currentCount == 0) ? 1.25f : 1.0f;
                 StartCoroutine(Circle((missDelayTime * (2f - speedModifier)) * bonusTimeMultiplier, currentCount));
                 currentCount++;
             }
