@@ -548,7 +548,7 @@ RectTransform:
   m_Children:
   - {fileID: 1901041757}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -619,7 +619,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1338982302 stripped
 GameObject:
@@ -1165,7 +1165,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &67507447811787201
 PrefabInstance:
@@ -1194,77 +1194,9 @@ PrefabInstance:
       propertyPath: characterScript
       value: 
       objectReference: {fileID: 2041519219}
-    - target: {fileID: 67507447846118288, guid: 71062bd8c4b66a34d8933ff4b79003a3, type: 3}
-      propertyPath: patterns.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 67507447846118288, guid: 71062bd8c4b66a34d8933ff4b79003a3, type: 3}
-      propertyPath: patterns.Array.data[0]
-      value: 
-      objectReference: {fileID: 1713302398327157787, guid: ef06ad451f4b9e647a5ae67edbc17359, type: 3}
-    - target: {fileID: 67507447846118288, guid: 71062bd8c4b66a34d8933ff4b79003a3, type: 3}
-      propertyPath: patterns.Array.data[1]
-      value: 
-      objectReference: {fileID: 1713302398327157787, guid: eaef0677d5b24cc44ae1df67c6f19eec, type: 3}
-    - target: {fileID: 67507447846118288, guid: 71062bd8c4b66a34d8933ff4b79003a3, type: 3}
-      propertyPath: patternsStage1.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 67507447846118288, guid: 71062bd8c4b66a34d8933ff4b79003a3, type: 3}
-      propertyPath: patternsStage2.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 67507447846118288, guid: 71062bd8c4b66a34d8933ff4b79003a3, type: 3}
-      propertyPath: patternsStage3.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 67507447846118288, guid: 71062bd8c4b66a34d8933ff4b79003a3, type: 3}
-      propertyPath: patternsStage4.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 67507447846118288, guid: 71062bd8c4b66a34d8933ff4b79003a3, type: 3}
-      propertyPath: scoreAdditionForPatternEnd
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 67507447846118288, guid: 71062bd8c4b66a34d8933ff4b79003a3, type: 3}
-      propertyPath: scoreAdditionForCircleClick
-      value: 0.016
-      objectReference: {fileID: 0}
-    - target: {fileID: 67507447846118288, guid: 71062bd8c4b66a34d8933ff4b79003a3, type: 3}
-      propertyPath: patternsStage1.Array.data[0]
-      value: 
-      objectReference: {fileID: 1713302398327157787, guid: ef06ad451f4b9e647a5ae67edbc17359, type: 3}
-    - target: {fileID: 67507447846118288, guid: 71062bd8c4b66a34d8933ff4b79003a3, type: 3}
-      propertyPath: patternsStage1.Array.data[1]
-      value: 
-      objectReference: {fileID: 1713302398327157787, guid: eaef0677d5b24cc44ae1df67c6f19eec, type: 3}
-    - target: {fileID: 67507447846118288, guid: 71062bd8c4b66a34d8933ff4b79003a3, type: 3}
-      propertyPath: patternsStage2.Array.data[0]
-      value: 
-      objectReference: {fileID: 1713302398327157787, guid: 3d63bdb980e5d0f48919f6b0acc4497d, type: 3}
-    - target: {fileID: 67507447846118288, guid: 71062bd8c4b66a34d8933ff4b79003a3, type: 3}
-      propertyPath: patternsStage2.Array.data[1]
-      value: 
-      objectReference: {fileID: 1713302398327157787, guid: e10e9448c0a033142bdd1a4e1bf44c83, type: 3}
-    - target: {fileID: 67507447846118288, guid: 71062bd8c4b66a34d8933ff4b79003a3, type: 3}
-      propertyPath: patternsStage3.Array.data[0]
-      value: 
-      objectReference: {fileID: 1713302398327157787, guid: 800ae114d8103ef49945e737d65323d7, type: 3}
-    - target: {fileID: 67507447846118288, guid: 71062bd8c4b66a34d8933ff4b79003a3, type: 3}
-      propertyPath: patternsStage3.Array.data[1]
-      value: 
-      objectReference: {fileID: 1713302398327157787, guid: e10e9448c0a033142bdd1a4e1bf44c83, type: 3}
-    - target: {fileID: 67507447846118288, guid: 71062bd8c4b66a34d8933ff4b79003a3, type: 3}
-      propertyPath: patternsStage4.Array.data[0]
-      value: 
-      objectReference: {fileID: 1713302398327157787, guid: 42e0e74b9ed1ad84989d191f676d903b, type: 3}
-    - target: {fileID: 67507447846118288, guid: 71062bd8c4b66a34d8933ff4b79003a3, type: 3}
-      propertyPath: scoreDeductionForCircleClick
-      value: 0.104
-      objectReference: {fileID: 0}
     - target: {fileID: 67507447846118289, guid: 71062bd8c4b66a34d8933ff4b79003a3, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 67507447846118289, guid: 71062bd8c4b66a34d8933ff4b79003a3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1372,10 +1304,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7943787656260347592, guid: d34715439e401244e903be260130aea7, type: 3}
-      propertyPath: m_MaskInteraction
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 7943787656260347593, guid: d34715439e401244e903be260130aea7, type: 3}
       propertyPath: m_Name
       value: Wand
@@ -1459,7 +1387,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8416907057050484902, guid: c6b73ee92f43d2f40a34466779e92fa8, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8416907057050484902, guid: c6b73ee92f43d2f40a34466779e92fa8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1540,7 +1468,7 @@ PrefabInstance:
       objectReference: {fileID: 1901041758}
     - target: {fileID: 8538029206073658389, guid: 97eec7162970eb542bb1264e154493fb, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8538029206073658389, guid: 97eec7162970eb542bb1264e154493fb, type: 3}
       propertyPath: m_LocalPosition.x

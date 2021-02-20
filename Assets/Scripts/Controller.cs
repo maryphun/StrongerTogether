@@ -31,6 +31,7 @@ public class Controller : MonoBehaviour
     [SerializeField] private Characters characterScript;
     [SerializeField] private GameObject hands;
     [SerializeField] private FollowCursor customCursor;
+    [SerializeField] private GameObject tutorialPattern, tutorialArrow;
 
     [Header("Debug")]
     [SerializeField, Range(0, 1)] private float currentScore = 0f;
@@ -39,6 +40,8 @@ public class Controller : MonoBehaviour
     private int combo;
     private int lastPattternIndex;
     private bool circleMissed;
+    private bool inTutorial;
+    private TutorialArrow spawnedTutorialArrow;
 
     void Awake()
     {
@@ -78,11 +81,8 @@ public class Controller : MonoBehaviour
         combo = 0;
         currentPattern = null;
 
-        // Instantiate First Pattern (avoid the last pattern for first spawn, if there are two pattern in this array, the first one always spawn first)
-        StartCoroutine(SpawnPattern(patternSpawnInterval, patternsStage1.Length - 1));
-
-        // BGM
-        audio.StartBGM();
+        // Instantiate Tutrial Pattern
+        StartCoroutine(SpawnTutorial(patternSpawnInterval));
 
         // show hands
         hands.SetActive(true);
@@ -114,6 +114,19 @@ public class Controller : MonoBehaviour
             // never miss a circle in this pattern
             currentScore = audio.ChangeScore(scoreAdditionForPatternEnd);
             FMODUnity.RuntimeManager.PlayOneShot("event:/FinishPatternSFX");
+
+            // get out of tutorial mode if it's in
+            if (inTutorial)
+            {
+                inTutorial = false;
+                spawnedTutorialArrow.SelfDestroy(patternSpawnInterval/2f);
+
+                // Reset score
+                currentScore = audio.SetScore(0);
+
+                // BGM
+                audio.StartBGM();
+            }
         }
 
         // Destroy Object
@@ -122,15 +135,38 @@ public class Controller : MonoBehaviour
         Destroy(currentPattern.gameObject, patternFadeTime);
 
         // Instantiate Next Pattern
-        StartCoroutine(SpawnPattern(patternSpawnInterval, lastPattternIndex));
+        if (!inTutorial)
+        {
+            StartCoroutine(SpawnPattern(patternSpawnInterval, lastPattternIndex));
+        }
+        else
+        {
+            spawnedTutorialArrow.SelfDestroy(patternSpawnInterval / 2f);
+            StartCoroutine(SpawnTutorial(patternSpawnInterval * 1.5f));
+        }
     }
 
+    IEnumerator SpawnTutorial(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+
+        // Reset variable
+        circleMissed = false;
+        inTutorial = true;
+        
+        // Instantiation
+        currentPattern = Instantiate(tutorialPattern).GetComponent<pattern>();
+        currentPattern.Activate(this, circleMissTiming, inTutorial);
+        spawnedTutorialArrow = Instantiate(tutorialArrow).GetComponent<TutorialArrow>();
+    }
+    
     IEnumerator SpawnPattern(float interval, int avoidIndex)
     {
         yield return new WaitForSeconds(interval);
 
         // Reset variable
         circleMissed = false;
+        inTutorial = false;
 
         // Check what stage currently in and create a list of available patterns
         List<GameObject> patterns = new List<GameObject>();
@@ -145,12 +181,13 @@ public class Controller : MonoBehaviour
         {
             if (i != avoidIndex) randomNumbers.Add(i);
         }
+
         int random = randomNumbers[Random.Range(0, randomNumbers.Count)];
 
         lastPattternIndex = random; // save index to avoid repeatation later
 
         // Instantiation
         currentPattern = Instantiate(patterns[random]).GetComponent<pattern>();
-        currentPattern.Activate(this, circleMissTiming);
+        currentPattern.Activate(this, circleMissTiming, inTutorial);
     }
 }

@@ -42,6 +42,12 @@ class FMODAudioManager : MonoBehaviour
         return scoreParam;
     }
 
+    public float SetScore(float num)
+    {
+        scoreParam = Mathf.Max(Mathf.Min(num, 1f), 0f);
+        return scoreParam;
+    }
+
     public void StartBGM()
     {
         instance.start();
