@@ -41,7 +41,7 @@ public class Controller : MonoBehaviour
 
     private pattern currentPattern;
     private int combo;
-    private int lastPattternIndex;
+    private string lastPattern;
     private bool circleMissed;
     private bool inTutorial;
     private TutorialArrow spawnedTutorialArrow;
@@ -77,6 +77,15 @@ public class Controller : MonoBehaviour
 
         AudioManager.Instance.PlayMusicWithFade(mainMenuBGM, 2f);
         AudioManager.Instance.SetMusicVolume(0.2f);
+    }
+
+    private void Update()
+    {
+        // Close the game
+        if (Input.GetKeyUp(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
     }
 
     public void StartGame()
@@ -160,7 +169,7 @@ public class Controller : MonoBehaviour
         // Instantiate Next Pattern
         if (!inTutorial)
         {
-            StartCoroutine(SpawnPattern(patternSpawnInterval - currentScore, lastPattternIndex));
+            StartCoroutine(SpawnPattern(patternSpawnInterval - currentScore, lastPattern));
         }
         else
         {
@@ -183,7 +192,7 @@ public class Controller : MonoBehaviour
         spawnedTutorialArrow = Instantiate(tutorialArrow).GetComponent<TutorialArrow>();
     }
 
-    IEnumerator SpawnPattern(float interval, int avoidIndex)
+    IEnumerator SpawnPattern(float interval, string avoidPattern)
     {
         yield return new WaitForSeconds(interval);
 
@@ -209,12 +218,12 @@ public class Controller : MonoBehaviour
         List<int> randomNumbers = new List<int>();
         for (int i = 0; i < patterns.Count; i++)
         {
-            if (i != avoidIndex) randomNumbers.Add(i);
+            if (patterns[i].gameObject.name != avoidPattern) randomNumbers.Add(i);
         }
 
         int random = randomNumbers[Random.Range(0, randomNumbers.Count)];
 
-        lastPattternIndex = random; // save index to avoid repeatation later
+        lastPattern = patterns[random].gameObject.name; // save index to avoid repeatation later
 
         // Instantiation
         currentPattern = Instantiate(patterns[random]).GetComponent<pattern>();

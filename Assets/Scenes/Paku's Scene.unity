@@ -1170,6 +1170,22 @@ PrefabInstance:
       propertyPath: characterScript
       value: 
       objectReference: {fileID: 2041519219}
+    - target: {fileID: 67507447846118288, guid: 71062bd8c4b66a34d8933ff4b79003a3, type: 3}
+      propertyPath: circleMissTiming
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 67507447846118288, guid: 71062bd8c4b66a34d8933ff4b79003a3, type: 3}
+      propertyPath: scoreAdditionForPatternEnd
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 67507447846118288, guid: 71062bd8c4b66a34d8933ff4b79003a3, type: 3}
+      propertyPath: scoreAdditionForCircleClick
+      value: 0.005
+      objectReference: {fileID: 0}
+    - target: {fileID: 67507447846118288, guid: 71062bd8c4b66a34d8933ff4b79003a3, type: 3}
+      propertyPath: scoreDeductionForCircleClick
+      value: 0.02
+      objectReference: {fileID: 0}
     - target: {fileID: 67507447846118289, guid: 71062bd8c4b66a34d8933ff4b79003a3, type: 3}
       propertyPath: m_RootOrder
       value: 4
