@@ -3860,54 +3860,54 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeTime: 4
   characters:
+  - transform: {fileID: 4296908376412786661}
+    score: 0
+  - transform: {fileID: 4296908377456886581}
+    score: 0.04
   - transform: {fileID: 4296908377351627865}
-    score: 0.05
-  - transform: {fileID: 4296908377582737113}
-    score: 0.1
-  - transform: {fileID: 4296908377329760608}
+    score: 0.04
+  - transform: {fileID: 1550494618}
+    score: 0.08
+  - transform: {fileID: 393271343}
+    score: 0.16
+  - transform: {fileID: 1223995716}
     score: 0.2
   - transform: {fileID: 4296908377679177933}
-    score: 0.3
-  - transform: {fileID: 4296908376412786661}
-    score: 0.4
-  - transform: {fileID: 1223995716}
-    score: 0.45
-  - transform: {fileID: 4296908377456886581}
-    score: 0.5
-  - transform: {fileID: 1550494618}
-    score: 0.6
-  - transform: {fileID: 393271343}
-    score: 0.625
+    score: 0.24
+  - transform: {fileID: 4296908377582737113}
+    score: 0.24
+  - transform: {fileID: 4296908377329760608}
+    score: 0.28
   - transform: {fileID: 1953491427}
-    score: 0.65
+    score: 0.32
   - transform: {fileID: 1957927553}
-    score: 0.7
+    score: 0.36
   - transform: {fileID: 681073742}
-    score: 0.75
+    score: 0.4
   - transform: {fileID: 623403836}
-    score: 0.8
+    score: 0.4
   - transform: {fileID: 1969998283}
-    score: 0.8
+    score: 0.44
   - transform: {fileID: 369411453}
-    score: 0.85
-  - transform: {fileID: 500008023}
-    score: 0.9
+    score: 0.48
   - transform: {fileID: 691357607}
-    score: 1
+    score: 0.48
+  - transform: {fileID: 500008023}
+    score: 0.52
   - transform: {fileID: 489480887}
-    score: 1
+    score: 0.56
   - transform: {fileID: 589889677}
-    score: 1
+    score: 0.6
   - transform: {fileID: 5064062421482032086}
-    score: 1
+    score: 0.64
   - transform: {fileID: 983754051435894554}
-    score: 1
+    score: 0.68
   - transform: {fileID: 77766538}
-    score: 1
+    score: 0.72
   - transform: {fileID: 897734107}
-    score: 1
+    score: 0.78
   - transform: {fileID: 519705168}
-    score: 1
+    score: 0.8
 --- !u!1 &4603348539306765698
 GameObject:
   m_ObjectHideFlags: 0

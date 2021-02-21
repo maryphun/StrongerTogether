@@ -930,13 +930,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 393271342, guid: 06abdb50fa8917b4fba78052de1dca93, type: 3}
+      propertyPath: m_MaskInteraction
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919812790, guid: 06abdb50fa8917b4fba78052de1dca93, type: 3}
+      propertyPath: fadeTime
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1223995719, guid: 06abdb50fa8917b4fba78052de1dca93, type: 3}
+      propertyPath: m_MaskInteraction
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4296908378368056824, guid: 06abdb50fa8917b4fba78052de1dca93, type: 3}
       propertyPath: m_Name
       value: CharacterHolder
-      objectReference: {fileID: 0}
-    - target: {fileID: 4296908378368056824, guid: 06abdb50fa8917b4fba78052de1dca93, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4296908378368056825, guid: 06abdb50fa8917b4fba78052de1dca93, type: 3}
       propertyPath: m_RootOrder
@@ -1170,6 +1178,18 @@ PrefabInstance:
       propertyPath: characterScript
       value: 
       objectReference: {fileID: 2041519219}
+    - target: {fileID: 67507447846118288, guid: 71062bd8c4b66a34d8933ff4b79003a3, type: 3}
+      propertyPath: scoreAdditionForPatternEnd
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 67507447846118288, guid: 71062bd8c4b66a34d8933ff4b79003a3, type: 3}
+      propertyPath: scoreAdditionForCircleClick
+      value: 0.005
+      objectReference: {fileID: 0}
+    - target: {fileID: 67507447846118288, guid: 71062bd8c4b66a34d8933ff4b79003a3, type: 3}
+      propertyPath: scoreDeductionForCircleClick
+      value: 0.02
+      objectReference: {fileID: 0}
     - target: {fileID: 67507447846118289, guid: 71062bd8c4b66a34d8933ff4b79003a3, type: 3}
       propertyPath: m_RootOrder
       value: 4
