@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using TMPro;
 
 public class Controller : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class Controller : MonoBehaviour
     [SerializeField] private float circleMissTiming = 1.0f;
     [SerializeField, Range(0.0f, 0.6f)] private float patternFadeTime = 0.3f;
     [SerializeField, Range(0.0f, 5.0f)] private float patternSpawnInterval = 2f;
-    [SerializeField, Range(0.01f, 0.99f)] private float victoryScore = 0.8f; 
+    [SerializeField, Range(0.01f, 0.99f)] private float victoryScore = 0.8f;
 
     [Header("Score")]
     [SerializeField, Range(0.0f, 1.0f)] private float scoreAdditionForCircleClick = 0.25f;
@@ -30,11 +31,13 @@ public class Controller : MonoBehaviour
     [SerializeField, Range(0.0f, 1.0f)] private float stage4Score = 0.6f;
     [SerializeField] private GameObject[] patternsStage4;
     [SerializeField] private GameObject finalPattern = default;
-    [SerializeField] private Characters characterScript;
-    [SerializeField] private GameObject hands;
-    [SerializeField] private FollowCursor customCursor;
-    [SerializeField] private GameObject tutorialPattern, tutorialArrow;
-    [SerializeField] private Background background;
+    [SerializeField] private Characters characterScript = default;
+    [SerializeField] private GameObject hands = default;
+    [SerializeField] private FollowCursor customCursor = default;
+    [SerializeField] private GameObject tutorialPattern, tutorialArrow = default;
+    [SerializeField] private Background background = default;
+    [SerializeField] private textDrag dragText = default;
+    [SerializeField] private TMP_Text finaleText = default;
 
     [Header("Debug")]
     [SerializeField, Range(0, 1)] private float currentScore = 0f;
@@ -68,6 +71,10 @@ public class Controller : MonoBehaviour
 
         // Disable hands visual until game actually start
         hands.SetActive(false);
+
+        // Disable texts
+        dragText.gameObject.SetActive(false);
+        dragText.enabled = false;
     }
 
     private void Start()
@@ -143,6 +150,10 @@ public class Controller : MonoBehaviour
 
                 // BGM
                 audio.StartBGM();
+
+                // Disable texts
+                dragText.gameObject.SetActive(false);
+                dragText.enabled = false;
             }
         }
 
@@ -190,10 +201,22 @@ public class Controller : MonoBehaviour
         currentPattern = Instantiate(tutorialPattern).GetComponent<pattern>();
         currentPattern.Activate(this, circleMissTiming, inTutorial);
         spawnedTutorialArrow = Instantiate(tutorialArrow).GetComponent<TutorialArrow>();
+
+        // Enable texts
+        dragText.gameObject.SetActive(true);
+        dragText.enabled = true;
     }
 
     IEnumerator SpawnPattern(float interval, string avoidPattern)
     {
+        // warning text like a last boss fight!
+        if (currentScore >= victoryScore)
+        {
+            Debug.Log("show text");
+            StartCoroutine(ShowFinaleTextForSeconds(5, 0.75f));
+            yield return new WaitForSeconds(3f);
+        }
+
         yield return new WaitForSeconds(interval);
 
         // Reset variable
@@ -254,5 +277,28 @@ public class Controller : MonoBehaviour
 
         currentScore = targetScore;
         characterScript.UpdateScore(currentScore);
+    }
+
+    IEnumerator ShowFinaleTextForSeconds(int blinkFrequency, float blinkInterval)
+    {
+        if (finaleText.gameObject.activeInHierarchy == true)
+        {
+            yield return null;
+        }
+
+        finaleText.gameObject.SetActive(true);
+        finaleText.color = Color.white;
+
+        int frequency = 0;
+        int alpha = 0;
+        for (frequency = 0; frequency <= blinkFrequency; frequency++)
+        {
+            alpha = alpha == 1 ? 0 : 1;
+            finaleText.color = new Color(1, 1, 1, alpha);
+            yield return new WaitForSeconds(blinkInterval);
+        }
+
+        finaleText.color = new Color(1, 1, 1, 0);
+        finaleText.gameObject.SetActive(false);
     }
 }

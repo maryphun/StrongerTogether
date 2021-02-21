@@ -311,6 +311,7 @@ MonoBehaviour:
     timing: 5.3
   animator: {fileID: 1713302398151137673}
   speedModifier: 1
+  hitBoxSize: 0.85
 --- !u!95 &8266124431535016232
 Animator:
   serializedVersion: 3

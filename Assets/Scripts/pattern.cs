@@ -15,6 +15,7 @@ public class pattern : MonoBehaviour
     [SerializeField] private CIRCLES[] circles;
     [SerializeField] private Animator animator;
     [SerializeField, Range(0.75f, 1.99f)] private float speedModifier = 1.0f;
+    [SerializeField, Range(0.5f, 1.0f)] private float hitBoxSize = 0.75f;
     
     private int currentActiveIndex;
     private Controller controller;
@@ -95,7 +96,7 @@ public class pattern : MonoBehaviour
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Mathf.Abs(Camera.main.transform.position.z)));
         if (((Input.GetMouseButton(0) && currentActiveIndex > 0)
             || (Input.GetMouseButtonDown(0) && currentActiveIndex == 0))
-            && Vector2.Distance(mousePos, circles[currentActiveIndex].sprite.transform.position) < 0.75f)
+            && Vector2.Distance(mousePos, circles[currentActiveIndex].sprite.transform.position) < hitBoxSize)
         {
             // check for tutorial
             if (currentActiveIndex == 0 && isTutorial)

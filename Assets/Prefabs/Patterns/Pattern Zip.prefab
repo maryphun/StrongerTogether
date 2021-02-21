@@ -590,6 +590,7 @@ MonoBehaviour:
     timing: 3.5
   animator: {fileID: 1713302398151137673}
   speedModifier: 1
+  hitBoxSize: 0.8
 --- !u!1 &1713302398727989745
 GameObject:
   m_ObjectHideFlags: 0

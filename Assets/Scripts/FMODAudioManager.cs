@@ -12,9 +12,6 @@ class FMODAudioManager : MonoBehaviour
     private FMOD.Studio.EventInstance instance;
     private FMOD.Studio.PARAMETER_ID scoreParamID;
 
-    [Header("Debug")]
-    [SerializeField] public Slider scoreVisualizer = default;
-
     [Header("Fmod related")]
     [SerializeField, FMODUnity.EventRef] private string fModEvent;
 
@@ -49,7 +46,6 @@ class FMODAudioManager : MonoBehaviour
         score = Mathf.MoveTowards(score, scoreParam, ascendingSpeed);
 
         FMODUnity.RuntimeManager.StudioSystem.setParameterByID(scoreParamID, score * 100f);
-        scoreVisualizer.value = scoreParam;
     }
 
     public float ChangeScore(float num)
